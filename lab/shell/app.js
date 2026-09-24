@@ -15,6 +15,7 @@ import {
   shortlist,
 } from "./state.js";
 import { renderTopbar } from "./topbar.js";
+import { bindChipScroll } from "./chipscroll.js";
 
 const app = document.querySelector("#app");
 let runAction;
@@ -66,6 +67,7 @@ function render() {
     <div id="checklist-host">${currentChecklist()}</div>
     <div id="overlay-host">${renderOverlay()}</div>`;
   bindEvents();
+  bindChipScroll();
   refreshPanel();
   bootFrame(recordFrameEvent);
 }
@@ -82,6 +84,7 @@ function refreshChrome() {
   const overlayHost = document.querySelector("#overlay-host");
   if (overlayHost) overlayHost.innerHTML = renderOverlay();
   bindEvents();
+  bindChipScroll();
   refreshPanel();
 }
 
