@@ -52,6 +52,13 @@ function platformCard(vendor) {
 export function renderStage(item) {
   const vendor = currentVendor();
 
+  if (vendor.dropped)
+    return `<div class="empty-stage dropped-stage">
+      <span class="eyebrow">Dropped from testing</span>
+      <strong>${escapeHtml(vendor.name)}</strong>
+      <span>${escapeHtml(vendor.dropReason)}</span>
+    </div>`;
+
   if (vendor.platform) return platformCard(vendor);
 
   if (!isReady(item) && item.fields?.some((field) => field.key === "snippet"))

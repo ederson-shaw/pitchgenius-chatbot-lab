@@ -1,4 +1,11 @@
-import { data, isReady, state, shortlist, escapeHtml } from "./state.js";
+import {
+  data,
+  droppedVendors,
+  isReady,
+  state,
+  shortlist,
+  escapeHtml,
+} from "./state.js";
 
 function chipName(vendor) {
   const names = {
@@ -19,6 +26,13 @@ function chipName(vendor) {
 }
 
 function renderVendorChip(vendor) {
+  if (vendor.dropped)
+    return `<button class="vendor-chip dropped" data-vendor="${vendor.id}"
+      aria-pressed="${vendor.id === state.bot}" title="${escapeHtml(vendor.dropReason)}">
+      <span class="status-dot"></span>
+      <span>${escapeHtml(chipName(vendor))}</span>
+    </button>`;
+
   const item = data.adapters.find((adapter) => adapter.id === vendor.id);
   const active = vendor.id === state.bot;
 
@@ -43,6 +57,16 @@ function renderPlatform() {
   return `<div class="chip-group platform-group">${vendors.map(renderVendorChip).join("")}</div>`;
 }
 
+function renderDropped() {
+  const vendors = droppedVendors();
+
+  if (!vendors.length) return "";
+
+  return `<div class="chip-group dropped-group">${vendors
+    .map(renderVendorChip)
+    .join("")}</div>`;
+}
+
 function renderMore() {
   if (!state.moreOpen) return "";
 
@@ -63,11 +87,11 @@ export function renderTopbar() {
       <div class="chip-groups">${renderGroups()}<div class="more-wrap">
         <button class="top-link more-trigger" data-more aria-expanded="${state.moreOpen}">More</button>
         ${renderMore()}
-      </div>${renderPlatform()}</div>
+      </div>${renderPlatform()}${renderDropped()}</div>
     </div>
     <div class="top-actions">
-      <button class="top-button ${state.checklistOpen ? "active" : ""}"
-        data-overlay="checklist" aria-pressed="${state.checklistOpen}">Checklist</button>
+      <button class="top-button ${state.checklistMode !== "closed" ? "active" : ""}"
+        data-overlay="checklist" aria-pressed="${state.checklistMode !== "closed"}">Checklist</button>
       <button class="top-button ${state.overlay === "conversations" ? "active" : ""}"
         data-overlay="conversations" aria-pressed="${state.overlay === "conversations"}">
         Conversations

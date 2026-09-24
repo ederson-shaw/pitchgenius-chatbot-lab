@@ -6,7 +6,10 @@ export const state = {
   view: params.get("view") || "desktop",
   tab: params.get("tab") || localStorage.getItem("pg.lab.tab") || "bots",
   overlay: params.get("overlay") || "",
-  checklistOpen: localStorage.getItem("pg.lab.checklist") === "1",
+  checklistMode:
+    localStorage.getItem("pg.lab.checklist.mode") ||
+    (localStorage.getItem("pg.lab.checklist") === "1" ? "groups" : "minimized"),
+  checklistGroup: localStorage.getItem("pg.lab.checklist.group") || "",
   conversationCompare: false,
   conversationScenario: "browse-what",
   moreOpen: false,
@@ -18,13 +21,13 @@ export const data = {
   criteria: { criteria: [] },
   checklist: { groups: [], vendors: {} },
   vendors: { vendors: [], rejected: [] },
+  dropped: { decided: "", vendors: {} },
   runs: {},
   report: { sections: [] },
   bots: {},
   adapters: [],
 };
 export const tabs = [
-  "checklist",
   "bots",
   "scenarios",
   "context",
@@ -52,39 +55,57 @@ export async function loadText(path) {
 }
 
 export async function loadData() {
-  const [scenarios, criteria, checklist, vendors, config, runs, report] =
-    await Promise.all([
-      loadJson("lab/data/scenarios.json"),
-      loadJson("lab/data/criteria.json"),
-      loadJson("lab/data/checklist.json"),
-      loadJson("lab/data/vendors.json"),
-      loadJson("config/bots.json"),
-      loadJson("lab/data/runs.json"),
-      loadJson("lab/data/report.json"),
-    ]);
+  const [
+    scenarios,
+    criteria,
+    checklist,
+    vendors,
+    dropped,
+    config,
+    runs,
+    report,
+  ] = await Promise.all([
+    loadJson("lab/data/scenarios.json"),
+    loadJson("lab/data/criteria.json"),
+    loadJson("lab/data/checklist.json"),
+    loadJson("lab/data/vendors.json"),
+    loadJson("lab/data/dropped.json"),
+    loadJson("config/bots.json"),
+    loadJson("lab/data/runs.json"),
+    loadJson("lab/data/report.json"),
+  ]);
 
   data.scenarios = scenarios;
   data.criteria = criteria;
   data.checklist = checklist;
   data.vendors = vendors;
+  data.dropped = dropped;
   data.runs = runs;
   data.report = report;
   data.bots = config.bots || {};
   data.adapters = makeAdapters(vendors.vendors);
+  data.vendors.vendors.forEach((vendor) => {
+    const reason = data.dropped.vendors[vendor.id];
+    if (reason) {
+      vendor.dropped = true;
+      vendor.dropReason = reason;
+    }
+  });
 
   const ready = data.vendors.vendors
-    .filter((vendor) => vendor.rank)
+    .filter((vendor) => vendor.rank && !vendor.dropped)
     .sort((left, right) => left.rank - right.rank)
     .find((vendor) => vendorReady(vendor));
   const requested = data.vendors.vendors.find(
     (vendor) => vendor.id === state.bot,
   );
 
-  if (!requested || !vendorReady(requested))
+  if (!requested || (!requested.dropped && !vendorReady(requested)))
     state.bot = ready?.id || data.adapters[0].id;
 }
 
 function vendorReady(vendor) {
+  if (vendor.dropped) return false;
   if (vendor.id === "own")
     return Boolean(data.bots.own?.baseUrl && data.bots.own?.model);
 
@@ -196,8 +217,19 @@ export function updateUrl() {
 
 export function shortlist() {
   return data.vendors.vendors
-    .filter((vendor) => vendor.rank)
+    .filter((vendor) => vendor.rank && !vendor.dropped)
     .sort((left, right) => left.rank - right.rank);
+}
+
+export function droppedVendors() {
+  return data.vendors.vendors
+    .filter((vendor) => vendor.dropped)
+    .sort((left, right) => (left.rank || 999) - (right.rank || 999));
+}
+
+export function saveChecklistState() {
+  localStorage.setItem("pg.lab.checklist.mode", state.checklistMode);
+  localStorage.setItem("pg.lab.checklist.group", state.checklistGroup);
 }
 
 export function turnFor(scenarioId) {

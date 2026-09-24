@@ -1,0 +1,9 @@
+{
+  "decided": "2026-09-24, owner: none of these four can be tested (paid, or they need something we cannot provide)",
+  "vendors": {
+    "freshchat": "Needs a Freshworks org login the owner does not have for this test",
+    "yellow": "Needs a yellow.ai account login the owner cannot provide",
+    "stammer": "No free plan: 7-day trial on a paid plan after email verification",
+    "dify": "Free AI credits used up; needs a paid model API key"
+  }
+}

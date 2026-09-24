@@ -9,6 +9,7 @@ import {
   data,
   escapeHtml,
   loadData,
+  saveChecklistState,
   state,
   updateUrl,
   shortlist,
@@ -25,7 +26,8 @@ function currentChecklist() {
     vendor,
     checklist: data.checklist,
     escapeHtml,
-    open: state.checklistOpen,
+    mode: state.checklistMode,
+    groupId: state.checklistGroup,
   });
 }
 
@@ -115,15 +117,35 @@ function bindEvents() {
     button.addEventListener("click", () => {
       const target = button.dataset.overlay;
       if (target === "checklist") {
-        state.checklistOpen = !state.checklistOpen;
-        localStorage.setItem(
-          "pg.lab.checklist",
-          state.checklistOpen ? "1" : "0",
-        );
+        state.checklistMode =
+          state.checklistMode === "closed" ? "minimized" : "closed";
+        saveChecklistState();
       } else {
         state.overlay = state.overlay === target ? "" : target;
         updateUrl();
       }
+      refreshChrome();
+    }),
+  );
+  document.querySelectorAll("[data-checklist-mode]").forEach((button) =>
+    button.addEventListener("click", () => {
+      state.checklistMode = button.dataset.checklistMode;
+      saveChecklistState();
+      refreshChrome();
+    }),
+  );
+  document.querySelectorAll("[data-checklist-group]").forEach((button) =>
+    button.addEventListener("click", () => {
+      state.checklistGroup = button.dataset.checklistGroup;
+      state.checklistMode = "open";
+      saveChecklistState();
+      refreshChrome();
+    }),
+  );
+  document.querySelectorAll("[data-checklist-close]").forEach((button) =>
+    button.addEventListener("click", () => {
+      state.checklistMode = "closed";
+      saveChecklistState();
       refreshChrome();
     }),
   );
@@ -141,15 +163,6 @@ function bindEvents() {
       refreshChrome();
     }),
   );
-  document
-    .querySelector("#checklist-card")
-    ?.addEventListener("toggle", (event) => {
-      state.checklistOpen = event.target.open;
-      localStorage.setItem("pg.lab.checklist", state.checklistOpen ? "1" : "0");
-      const button = document.querySelector('[data-overlay="checklist"]');
-      button?.classList.toggle("active", state.checklistOpen);
-      button?.setAttribute("aria-pressed", String(state.checklistOpen));
-    });
   document
     .querySelector("[data-conversation-compare]")
     ?.addEventListener("click", () => {

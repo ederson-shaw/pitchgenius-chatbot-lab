@@ -14,7 +14,7 @@
   grid-template-columns: minmax(130px, 0.7fr) minmax(0, 1.6fr) auto;
   gap: 12px;
   align-items: center;
-  padding: 13px 7px;
+  padding: 14px 8px;
   cursor: pointer;
   list-style: none;
 }
@@ -22,24 +22,26 @@
 .conversation-row-name,
 .finding-title {
   color: var(--ink);
-  font-size: 11px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .conversation-row-answer,
 .finding-preview {
   overflow: hidden;
-  color: #617188;
-  font-size: 11px;
+  color: #3d4a5c;
+  font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .conversation-row-time {
-  color: var(--blue);
-  font:
-    9px "DM Mono",
-    monospace;
+  border-radius: 999px;
+  padding: 3px 9px;
+  color: #3d4a5c;
+  background: #eef1f5;
+  font-size: 12px;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -56,33 +58,38 @@
 }
 
 .conversation-turn {
-  padding-left: 10px;
-  border-left: 2px solid #b8d8d5;
+  display: grid;
+  gap: 8px;
 }
 
 .conversation-turn-label,
 .conversation-timing,
 .conversation-meta {
-  color: #8897a8;
-  font:
-    9px "DM Mono",
-    monospace;
+  color: #5f6b7d;
+  font-size: 12px;
 }
 
 .conversation-visitor,
 .conversation-bot {
-  margin: 4px 0 0;
-  font-size: 11px;
-  line-height: 1.45;
+  margin: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.5;
   white-space: pre-wrap;
 }
 
 .conversation-visitor {
-  color: var(--muted);
+  justify-self: end;
+  max-width: 85%;
+  color: #0b3b3c;
+  background: #e3f5f5;
 }
 
 .conversation-bot {
+  border: 1px solid #e2e7ee;
   color: var(--ink);
+  background: #ffffff;
 }
 
 .conversation-meta {
@@ -105,9 +112,7 @@
   align-content: start;
   gap: 5px;
   color: var(--blue);
-  font:
-    9px "DM Mono",
-    monospace;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -128,7 +133,7 @@
 .overlay-empty {
   margin: 15px 7px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .finding-row summary {
@@ -168,9 +173,7 @@
   border-color: var(--line);
   color: #9aa7b7;
   background: #fbfcfd;
-  font:
-    10px "DM Mono",
-    monospace;
+  font-size: 12px;
 }
 
 .recorded-run-head,
@@ -180,15 +183,13 @@
   justify-content: space-between;
   gap: 8px;
   color: #557977;
-  font:
-    9px "DM Mono",
-    monospace;
+  font-size: 12px;
 }
 
 .recorded-run-answer p {
   margin: 0 0 5px;
   color: var(--ink);
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.45;
 }
 

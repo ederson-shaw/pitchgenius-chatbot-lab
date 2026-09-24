@@ -90,6 +90,17 @@ function renderSelected({
   </div>`;
 }
 
+function renderDroppedCard(meta, escapeHtml) {
+  return `<div class="card selected dropped-card">
+    <div class="card-top">
+      <h3>${escapeHtml(meta.name)}</h3>
+      <span class="tag orange">dropped</span>
+    </div>
+    <p class="verdict">${escapeHtml(meta.dropReason)}</p>
+    <p class="small">This vendor stays visible for review but never loads in the stage or becomes the default.</p>
+  </div>`;
+}
+
 function renderConfiguration(fields) {
   return `<div class="card">
     <div class="card-top">
@@ -112,6 +123,9 @@ export function renderBots({
   escapeHtml,
   actionButton,
 }) {
+  if (meta.dropped)
+    return `${renderHeader("Dropped vendor", escapeHtml)}${renderDroppedCard(meta, escapeHtml)}`;
+
   const fields = (item.fields || [])
     .map((field) => renderField(field, cfg[field.key] || "", escapeHtml))
     .join("");

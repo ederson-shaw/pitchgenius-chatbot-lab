@@ -1,14 +1,12 @@
 @font-face {
   font-family: "Pitch Manrope";
-  src: url("../../home-assets/fonts/4c9affa5bc8f420e-s.p-3bf987f1fc.woff2")
-    format("woff2");
+  src: url("../../home-assets/fonts/4c9affa5bc8f420e-s.p-3bf987f1fc.woff2") format("woff2");
   font-weight: 200 800;
 }
 
 @font-face {
   font-family: "Pitch Sora";
-  src: url("../../home-assets/fonts/3dc379dc9b5dec12-s.p-cad4651bfd.woff2")
-    format("woff2");
+  src: url("../../home-assets/fonts/3dc379dc9b5dec12-s.p-cad4651bfd.woff2") format("woff2");
   font-weight: 400 800;
 }
 
@@ -161,16 +159,15 @@ a:focus-visible {
   min-height: 30px;
   align-items: center;
   gap: 5px;
-  padding: 6px 8px;
-  font-size: 10px;
+  padding: 6px 10px;
+  font-size: 12.5px;
   white-space: nowrap;
 }
 
 .chip-rank {
   color: #9db3d1;
-  font:
-    9px "DM Mono",
-    monospace;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .vendor-chip:hover,
@@ -187,6 +184,28 @@ a:focus-visible {
 .vendor-chip:disabled {
   cursor: not-allowed;
   opacity: 0.45;
+}
+
+.vendor-chip.dropped {
+  border-color: #4a596b;
+  color: #9ba7b5;
+  background: #152437;
+}
+
+.vendor-chip.dropped:hover,
+.vendor-chip.dropped.active {
+  border-color: #718095;
+  background: #1d3047;
+}
+
+.vendor-chip.dropped .status-dot {
+  background: #7b8795;
+}
+
+.dropped-group {
+  margin-left: 3px;
+  padding-left: 6px;
+  border-left: 1px solid #344962;
 }
 
 .status-dot {
@@ -230,8 +249,8 @@ a:focus-visible {
 
 .top-link,
 .top-button {
-  padding: 7px 8px;
-  font-size: 10px;
+  padding: 7px 10px;
+  font-size: 12.5px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -262,21 +281,4 @@ a:focus-visible {
 
 .muted {
   color: #9aa7b7;
-}
-
-.chip-groups {
-  padding: 0 14px;
-  scroll-behavior: smooth;
-  scroll-snap-type: x proximity;
-  scrollbar-width: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 32px), transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 32px), transparent 100%);
-}
-
-.chip-groups::-webkit-scrollbar {
-  display: none;
-}
-
-.vendor-chip {
-  scroll-snap-align: start;
 }

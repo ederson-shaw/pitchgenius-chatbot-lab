@@ -1,3 +1,11 @@
+function formatDate(value) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) return "Date unavailable";
+
+  return date.toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" });
+}
+
 function scenariosFor(data) {
   return (data.scenarios.groups || []).flatMap((group) => group.items);
 }
@@ -37,14 +45,12 @@ function runDetail(vendorId, scenarioId, run, escapeHtml) {
   const errors = run.errors?.length
     ? `<p class="conversation-errors">${escapeHtml(run.errors.join(" · "))}</p>`
     : "";
-  const image = run.screenshot
-    ? run.screenshot
-    : `lab/runs/${vendorId}/${scenarioId}.png`;
+  const image = run.screenshot ? run.screenshot : `lab/runs/${vendorId}/${scenarioId}.png`;
 
   return `<div class="conversation-detail">
     <div class="conversation-turns">${turns(run, escapeHtml)}</div>
     <div class="conversation-meta">
-      <span>${escapeHtml(run.date || "Date unavailable")}</span>
+      <span>${escapeHtml(formatDate(run.date))}</span>
       ${errors}
     </div>
     <a class="conversation-thumb" href="${escapeHtml(image)}" target="_blank" rel="noreferrer">
@@ -73,8 +79,7 @@ function currentRows(data, scenarioList, escapeHtml) {
         ${runDetail(vendorId, scenario.id, run, escapeHtml)}
       </details>`;
       })
-      .join("") ||
-    `<p class="overlay-empty">No recorded scenarios for this vendor yet.</p>`
+      .join("") || `<p class="overlay-empty">No recorded scenarios for this vendor yet.</p>`
   );
 }
 
@@ -125,20 +130,13 @@ function scenarioSelect(scenarioList, selected, escapeHtml) {
 
 export function renderConversations({ data, vendor, escapeHtml, state }) {
   const scenarioList = scenariosFor(data);
-  const selected = scenarioList.some(
-    (scenario) => scenario.id === state.conversationScenario,
-  )
+  const selected = scenarioList.some((scenario) => scenario.id === state.conversationScenario)
     ? state.conversationScenario
     : scenarioList[0]?.id;
-  const scenario =
-    scenarioList.find((item) => item.id === selected) || scenarioList[0];
+  const scenario = scenarioList.find((item) => item.id === selected) || scenarioList[0];
   const content = state.conversationCompare
     ? compareRows({ ...data, currentVendorId: vendor.id }, scenario, escapeHtml)
-    : currentRows(
-        { ...data, currentVendorId: vendor.id },
-        scenarioList,
-        escapeHtml,
-      );
+    : currentRows({ ...data, currentVendorId: vendor.id }, scenarioList, escapeHtml);
   const controls = state.conversationCompare
     ? scenarioSelect(scenarioList, selected, escapeHtml)
     : `<span class="conversation-scope">${escapeHtml(vendor.name)} · recorded runs</span>`;

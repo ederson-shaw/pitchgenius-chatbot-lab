@@ -21,11 +21,9 @@
 
 .eyebrow {
   color: var(--blue);
-  font:
-    10px "DM Mono",
-    monospace;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .card {
@@ -39,6 +37,11 @@
 .card.selected {
   border-color: #8ba8e9;
   box-shadow: 0 0 0 3px var(--blue-soft);
+}
+
+.card.dropped-card {
+  border-color: #d4dce5;
+  box-shadow: none;
 }
 
 .card-top,
@@ -69,9 +72,7 @@
   padding: 4px 7px;
   color: var(--blue);
   background: var(--blue-soft);
-  font:
-    10px "DM Mono",
-    monospace;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
@@ -120,7 +121,7 @@
 }
 
 .field label {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -204,14 +205,12 @@
   padding: 8px 0;
   border-bottom: 1px solid #edf1f4;
   white-space: pre-wrap;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .log-time,
 .log-type {
-  font:
-    10px "DM Mono",
-    monospace;
+  font-size: 12px;
 }
 
 .log-time {
@@ -229,7 +228,7 @@ pre {
   overflow: auto;
   color: #53657c;
   font:
-    10px/1.55 "DM Mono",
+    12px/1.55 "DM Mono",
     monospace;
   white-space: pre-wrap;
 }
@@ -247,12 +246,12 @@ pre {
 .turn-json summary {
   cursor: pointer;
   color: var(--blue);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
 }
 
 .inject-card textarea {
   min-height: 130px;
   font-family: "DM Mono", monospace;
-  font-size: 11px;
+  font-size: 13px;
 }

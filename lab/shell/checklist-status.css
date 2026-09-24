@@ -1,0 +1,137 @@
+.count-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.count-pill.native,
+.legend-entry.native {
+  color: #1a7f57;
+  background: #e6f6ef;
+}
+
+.count-pill.build,
+.legend-entry.build {
+  color: #8a5600;
+  background: #fff3dc;
+}
+
+.count-pill.no,
+.legend-entry.no {
+  color: #b02f2f;
+  background: #fdeaea;
+}
+
+.count-pill.unknown,
+.legend-entry.unknown {
+  color: #515d6e;
+  background: #eef1f5;
+}
+
+.status-bar {
+  display: flex;
+  width: 100%;
+  height: 6px;
+  gap: 1px;
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.status-seg {
+  flex: 1;
+  background: #c9d1dc;
+}
+
+.status-seg.native {
+  background: #1f9d6b;
+}
+
+.status-seg.build {
+  background: #e0a526;
+}
+
+.status-seg.no {
+  background: #d64545;
+}
+
+.checklist-total {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.checklist-total .status-bar {
+  margin-top: 4px;
+}
+
+.checklist-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 4px;
+}
+
+.legend-entry {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.checklist-pill-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.checklist-pill-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.checklist-pill-counts {
+  display: flex;
+  gap: 4px;
+}
+
+.checklist-pill .status-bar {
+  margin-top: 6px;
+}
+
+.checklist-item-title {
+  font-size: 14px;
+}
+
+.checklist-status-word {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.checklist-minimized .checklist-pill {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 6px;
+}
+
+.checklist-minimized .checklist-pill .status-bar {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.checklist-minimized .checklist-pill-arrow {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.checklist-legend {
+  padding: 0 16px;
+}

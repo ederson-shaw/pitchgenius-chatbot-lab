@@ -8,18 +8,18 @@
     },
     {
       "title": "Do now",
-      "preview": "- Fix llms.txt before training any bot on it. The live file still says \"No live OAuth CRM sync in this build\" while the product connects HubSpot, Pipedrive, Salesforce and GoHighLevel per seat. Any bot trained on it will tell buyers something false.",
+      "preview": "Fix llms.txt before training any bot on it. The live file still says \"No live OAuth CRM sync in this build\" while the product connects HubSpot, Pipedrive, Salesforce and GoHighLevel per seat. Any bot trained on it will tell buyers something false.",
       "body": "- Fix llms.txt before training any bot on it. The live file still says \"No live OAuth CRM sync in this build\" while the product connects HubSpot, Pipedrive, Salesforce and GoHighLevel per seat. Any bot trained on it will tell buyers something false.\n- Every bot must say it is an AI at the start. California's B.O.T. Act (Bus. & Prof. Code §17941) and EU AI Act Article 50, in force since 2026-08-02, both require it.\n- A bot pays for itself with one Solo sale a month ($299). Anything above that per month needs volume to justify it.\n- Three decisions the flowchart leaves open: what the Individual seller is offered (the price page has Solo and Teams only), whether pilots book into the \"investor-introduction\" calendar the site uses today, and whether existing customers get support answers or a hand-off to support@."
     },
     {
       "title": "What the earlier Grok analysis got wrong",
-      "preview": "- Its core rule, \"LLM only owns phrasing\" with deterministic slots, contradicts the flowchart itself, which gives the agent the job of detecting intent and identifying the visitor.",
+      "preview": "Its core rule, \"LLM only owns phrasing\" with deterministic slots, contradicts the flowchart itself, which gives the agent the job of detecting intent and identifying the visitor.",
       "body": "- Its core rule, \"LLM only owns phrasing\" with deterministic slots, contradicts the flowchart itself, which gives the agent the job of detecting intent and identifying the visitor.\n- It said Botpress has no GoHighLevel integration. Botpress's own hub lists one, maintained by Botpress (contacts, opportunities, appointments).\n- It never named the GoHighLevel-native bots (CloseBot, Stammer.ai, Asyntai, Assistable.ai), the category closest to this stack.\n- It proposed RB2B or Warmly to identify visitors; the site already loads ZoomInfo's visitor tag.\n- \"DeepSeek V4 Flash\" does not exist. Qualified has no \"Growth\" tier. Crisp's AI starts at Mini ($45), not Plus. Typebot is FSL, not AGPL. Landbot's \"Professional\" numbers were the Starter plan's. Voiceflow no longer publishes prices.\n- It billed GoHighLevel Conversation AI per reply; GoHighLevel bills per token. Its MCP \"tool list\" is really four tools that reach 550+ operations.\n- It had no legal layer and no page-speed or abuse budget."
     },
     {
       "title": "Monthly cost at 300 / 1,000 / 3,000 website conversations",
-      "preview": "| Option | 300 | 1,000 | 3,000 | Free test |",
-      "body": "| Option | 300 | 1,000 | 3,000 | Free test |\n|---|---|---|---|---|\n| Our own agent (LLM only) | $1 to $25 | $4 to $84 | $13 to $252 | now, with any OpenAI-compatible key |\n| GoHighLevel AI Employee Unlimited | $97 | $97 | $97 | pay-per-use tokens on the existing account |\n| Botpress | $215 | $670 | $1,500 | 25 conversations a month |\n| Typebot (+ own LLM key for AI blocks) | $39 | $39 | $59 | 200 chats a month |\n| Stammer.ai | $68 | $124 | $284 | 7-day trial |\n| Asyntai | $39 | $139 | $449 | 100 replies a month, or 14-day trial |\n| CloseBot | conflicting on its own pages | | | 100 messages a month |\n| Chatbase | $150 | about $230 | about $620 | 50 credits a month |\n| Chatling | $25 | $75 | $295 | 200 credits |\n| DocsBot | $49 | $49 to $149 | $149 | 100 credits |\n| Fin (formerly Intercom) | about $3,026 | about $10,019 | about $30,000 | none |\n\nCredit-based vendors assume 5 to 8 replies per conversation; each vendor card in the lab shows its formula and source."
+      "preview": "Our own agent (LLM only): 300 $1 to $25 · 1,000 $4 to $84 · 3,000 $13 to $252 · Free test now, with any OpenAI-compatible key",
+      "body": "- Our own agent (LLM only): 300 $1 to $25 · 1,000 $4 to $84 · 3,000 $13 to $252 · Free test now, with any OpenAI-compatible key\n- GoHighLevel AI Employee Unlimited: 300 $97 · 1,000 $97 · 3,000 $97 · Free test pay-per-use tokens on the existing account\n- Botpress: 300 $215 · 1,000 $670 · 3,000 $1,500 · Free test 25 conversations a month\n- Typebot (+ own LLM key for AI blocks): 300 $39 · 1,000 $39 · 3,000 $59 · Free test 200 chats a month\n- Stammer.ai: 300 $68 · 1,000 $124 · 3,000 $284 · Free test 7-day trial\n- Asyntai: 300 $39 · 1,000 $139 · 3,000 $449 · Free test 100 replies a month, or 14-day trial\n- CloseBot: 300 conflicting on its own pages · Free test 100 messages a month\n- Chatbase: 300 $150 · 1,000 about $230 · 3,000 about $620 · Free test 50 credits a month\n- Chatling: 300 $25 · 1,000 $75 · 3,000 $295 · Free test 200 credits\n- DocsBot: 300 $49 · 1,000 $49 to $149 · 3,000 $149 · Free test 100 credits\n- Fin (formerly Intercom): 300 about $3,026 · 1,000 about $10,019 · 3,000 about $30,000 · Free test none\n\nCredit-based vendors assume 5 to 8 replies per conversation; each vendor card in the lab shows its formula and source."
     },
     {
       "title": "What our category runs today",
@@ -28,22 +28,22 @@
     },
     {
       "title": "Rejected",
-      "preview": "- Qualified: Salesforce closed the acquisition on 2026-04-01 (Qualified newsroom, Salesforce 10-Q); Salesforce-only, no public price.",
+      "preview": "Qualified: Salesforce closed the acquisition on 2026-04-01 (Qualified newsroom, Salesforce 10-Q); Salesforce-only, no public price.",
       "body": "- Qualified: Salesforce closed the acquisition on 2026-04-01 (Qualified newsroom, Salesforce 10-Q); Salesforce-only, no public price.\n- Drift: being sunset, 1mind named successor (Salesloft newsroom, 2026-03-05). 1mind: demo-gated video avatars.\n- Warmly: HubSpot acquisition announced 2026-06-30; cheapest chat tier $20,000/yr.\n- Chili Piper: scheduling, from $15,000/yr; the site already books through GoHighLevel.\n- Flowise: bought by Workday, repository archived 2026-08-13. OpenAI Agent Builder: shuts down 2026-11-30 (OpenAI deprecations page).\n- CustomGPT.ai, SiteGPT, Assistable.ai: no free tier and nothing the shortlist lacks. Dify: no widget API."
     },
     {
       "title": "How the lab decides",
-      "preview": "- 38 scenarios from the flowchart (4 intents, 4 persona scripts, non-fits, pricing, objections, booking, prompt injection, context, language), sent the same way to every bot.",
-      "body": "- 38 scenarios from the flowchart (4 intents, 4 persona scripts, non-fits, pricing, objections, booking, prompt injection, context, language), sent the same way to every bot.\n- 53 criteria from the flowchart, the product facts and the law, each 0-100 with a note, scored by people reading the answers. The lab computes no winner.\n- The Events tab shows what each widget exposes and how many requests it adds to the page."
+      "preview": "39 scenarios from the flowchart (4 intents, 4 persona scripts, non-fits, pricing, objections, booking, prompt injection, context, language), sent the same way to every bot.",
+      "body": "- 39 scenarios from the flowchart (4 intents, 4 persona scripts, non-fits, pricing, objections, booking, prompt injection, context, language), sent the same way to every bot.\n- 53 criteria from the flowchart, the product facts and the law, each 0-100 with a note, scored by people reading the answers. The lab computes no winner.\n- The Events tab shows what each widget exposes and how many requests it adds to the page."
     },
     {
       "title": "Two questions that decide the routes, now answered",
-      "preview": "- Our own agent can hand a chat to a person inside GoHighLevel. A marketplace app can register a custom conversation provider: it shows up as its own channel in the Conversations tab, visitor messages go in through the Add Inbound Message API, and a person's reply in GoHighLevel is posted to our webhook (marketplace.gohighlevel.com/docs/marketplace-modules/ConversationProviders, scope conversations/message.write).",
+      "preview": "Our own agent can hand a chat to a person inside GoHighLevel. A marketplace app can register a custom conversation provider: it shows up as its own channel in the Conversations tab, visitor messages go in through the Add Inbound Message API, and a person's reply in GoHighLevel is posted to our webhook (marketplace.gohighlevel.com/docs/marketplace-modules/ConversationProviders, scope conversations/message.write).",
       "body": "- Our own agent can hand a chat to a person inside GoHighLevel. A marketplace app can register a custom conversation provider: it shows up as its own channel in the Conversations tab, visitor messages go in through the Add Inbound Message API, and a person's reply in GoHighLevel is posted to our webhook (marketplace.gohighlevel.com/docs/marketplace-modules/ConversationProviders, scope conversations/message.write).\n- Botpress writes tags and custom fields: its Upsert Contact action passes a raw JSON object straight to GoHighLevel's upsert (github.com/botpress/growth, integrations/gohighlevel/src/misc/custom-schemas.ts line 52). It has no dedicated tag action."
     },
     {
       "title": "Could not confirm",
-      "preview": "- GoHighLevel's \"fair use\" ceiling on Unlimited.",
+      "preview": "GoHighLevel's \"fair use\" ceiling on Unlimited.",
       "body": "- GoHighLevel's \"fair use\" ceiling on Unlimited.\n- CloseBot's real price, and the JavaScript APIs of Stammer.ai and Asyntai (dashboard-only).\n- Voiceflow's price; Zoho SalesIQ's USD price.\n\nSources: every number above is quoted with its URL and fetch date (2026-09-24) in research/vendors/*.md; 20 of them were re-fetched by an independent reviewer (research/VERIFY.md)."
     }
   ]

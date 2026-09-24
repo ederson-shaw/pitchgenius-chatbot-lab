@@ -1,6 +1,5 @@
 import { renderBots } from "../panels/bots.js";
 import { renderBrand } from "../panels/brand.js";
-import { renderChecklist } from "../panels/checklist.js";
 import { renderContext } from "../panels/context.js";
 import { renderEvents } from "../panels/events.js";
 import { renderFindings } from "../panels/findings.js";
@@ -81,13 +80,6 @@ export function renderPanel() {
   const item = currentAdapter();
   const meta = currentVendor();
   const renderers = {
-    checklist: () =>
-      renderChecklist({
-        vendor: meta,
-        checklist: data.checklist,
-        escapeHtml,
-        open: true,
-      }),
     bots: () =>
       renderBots({
         item,
