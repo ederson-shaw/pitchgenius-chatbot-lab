@@ -1,0 +1,113 @@
+{
+  "bots": {
+    "own": {
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "model": "",
+      "snippet": ""
+    },
+    "snippet": {
+      "snippet": ""
+    },
+    "crisp": {
+      "websiteId": "",
+      "snippet": ""
+    },
+    "tawk": {
+      "propertyId": "",
+      "widgetId": "default",
+      "snippet": ""
+    },
+    "intercom": {
+      "appId": "",
+      "snippet": "<script>\n  window.intercomSettings = {\n    api_base: \"https://api-iam.intercom.io\",\n    app_id: \"a8vjinxr\",\n  };\n</script>\n\n\n<script>\n  // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/a8vjinxr'\n  (function(){var w=window;var ic=w.Intercom;if(typeof ic===\"function\"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/a8vjinxr';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();\n</script>\n"
+    },
+    "tidio": {
+      "publicKey": "",
+      "snippet": ""
+    },
+    "hubspot": {
+      "portalId": "",
+      "region": "na1",
+      "snippet": ""
+    },
+    "botpress": {
+      "botId": "",
+      "clientId": "",
+      "snippet": "<script src=\"https://cdn.botpress.cloud/webchat/v5.0/inject.js\"></script>\n<script src=\"https://files.bpcontent.cloud/2026/09/24/17/20260924172158-TNOAUHAW.js\" defer></script>\n"
+    },
+    "voiceflow": {
+      "projectId": "",
+      "versionId": "production",
+      "snippet": "<script type=\"text/javascript\">\n  (function(d, t) {\n      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];\n      v.onload = function() {\n        window.voiceflow.chat.load({\n          verify: { projectID: '6ab55b3520ce37c0c140b4cb' },\n          url: 'https://general-runtime.voiceflow.com',\n          voice: {\n            url: \"https://runtime-api.voiceflow.com\"\n          }\n        });\n      }\n      v.src = \"https://cdn.voiceflow.com/widget-next/bundle.mjs\"; v.type = \"text/javascript\"; s.parentNode.insertBefore(v, s);\n  })(document, 'script');\n</script>\n"
+    },
+    "typebot": {
+      "typebotId": "",
+      "snippet": ""
+    },
+    "chatbase": {
+      "chatbotId": "",
+      "snippet": "<script>window.chatbaseConfig = { chatbotId: \"ypN18hcm863Tbk1HSjJLs\" };</script>\n<script src=\"https://www.chatbase.co/embed.min.js\" chatbotId=\"ypN18hcm863Tbk1HSjJLs\" domain=\"www.chatbase.co\" defer></script>\n"
+    },
+    "chatwoot": {
+      "baseUrl": "",
+      "websiteToken": "",
+      "snippet": ""
+    },
+    "zoho": {
+      "widgetCode": "",
+      "snippet": ""
+    },
+    "ghl": {
+      "widgetId": "",
+      "snippet": ""
+    },
+    "deep-chat": {
+      "snippet": ""
+    },
+    "react-chatbotify": {
+      "snippet": ""
+    },
+    "asyntai": {
+      "snippet": "<script>(function(){var l=function(){var s=document.createElement(\"script\");s.src=\"https://widget.asyntai.com/static/js/chat-widget.js\";s.async=true;s.setAttribute(\"data-asyntai-id\",\"asyntai_e41278ad606d\");document.head.appendChild(s)};if(document.readyState===\"complete\"){l()}else{window.addEventListener(\"load\",l)}})();</script>\n"
+    },
+    "stammer": {
+      "snippet": ""
+    },
+    "landbot": {
+      "snippet": ""
+    },
+    "dify": {
+      "snippet": ""
+    },
+    "tars": {
+      "snippet": "<script src=\"https://neoagent.hellotars.com/embed.js\" data-convid=\"IVWq3v5p\" data-region=\"us\" defer></script>\n"
+    },
+    "chatling": {
+      "snippet": "<script> window.chtlConfig = { chatbotId: \"7728233185\" } </script>\n<script async data-id=\"7728233185\" id=\"chtl-script\" type=\"text/javascript\" src=\"https://chatling.ai/js/embed.js\"></script>\n"
+    },
+    "docsbot": {
+      "snippet": "<script type=\"text/javascript\">window.DocsBotAI=window.DocsBotAI||{},DocsBotAI.init=function(e){return new Promise((t,r)=>{var n=document.createElement(\"script\");n.type=\"text/javascript\",n.async=!0,n.src=\"https://widget.docsbot.ai/chat.js\";let o=document.getElementsByTagName(\"script\")[0];o.parentNode.insertBefore(n,o),n.addEventListener(\"load\",()=>{let n;Promise.all([new Promise((t,r)=>{window.DocsBotAI.mount(Object.assign({}, e)).then(t).catch(r)}),(n=function e(t){return new Promise(e=>{if(document.querySelector(t))return e(document.querySelector(t));let r=new MutationObserver(n=>{if(document.querySelector(t))return e(document.querySelector(t)),r.disconnect()});r.observe(document.body,{childList:!0,subtree:!0})})})(\"#docsbotai-root\"),]).then(()=>t()).catch(r)}),n.addEventListener(\"error\",e=>{r(e.message)})})};</script>\n<script type=\"text/javascript\">DocsBotAI.init({id: \"SmnXaC9T39dqWHZ7M6W2/kKj6pokhsReFydbtYJnc\"});</script>\n"
+    },
+    "elfsight": {
+      "snippet": ""
+    },
+    "wonderchat": {
+      "snippet": "<script>\n(function () {\n  window.wonderchatSettings = {\n    id: \"cmuftwqbh83s8gtmyfgm6ib5u\",\n    address: \"app.wonderchat.io\",\n    widgetSize: \"normal\",\n    widgetButtonSize: \"normal\"\n  };\n  var s = document.createElement(\"script\");\n  s.src = \"https://app.wonderchat.io/scripts/wonderchat-seo.js\";\n  s.defer = true;\n  document.body.appendChild(s);\n})();\n</script>\n"
+    },
+    "freshchat": {
+      "snippet": ""
+    },
+    "jivochat": {
+      "snippet": ""
+    },
+    "yellow": {
+      "snippet": ""
+    },
+    "kapa": {
+      "snippet": ""
+    },
+    "closebot": {
+      "snippet": ""
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@media (max-width: 1120px) {
+  .topbar {
+    gap: 10px;
+    padding-inline: 16px;
+  }
+
+  .brand {
+    min-width: 178px;
+  }
+
+  .top-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    height: 64px;
+    min-height: 64px;
+    padding: 13px 16px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-divider,
+  .brand-label {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .drawer {
+    position: fixed;
+    z-index: 3;
+    inset: 64px 0 0 auto;
+    width: min(430px, 100%);
+    box-shadow: -12px 0 30px rgba(18, 36, 61, 0.15);
+  }
+
+  .layout.drawer-closed .drawer {
+    transform: translateX(100%);
+  }
+
+  .stage-wrap {
+    padding: 12px;
+  }
+
+  .device-frame {
+    transform: scale(0.78);
+    transform-origin: top center;
+  }
+}

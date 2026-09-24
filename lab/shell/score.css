@@ -1,0 +1,69 @@
+.score-grid {
+  width: 100%;
+  overflow: auto;
+}
+
+.score-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.score-grid th,
+.score-grid td {
+  min-width: 92px;
+  padding: 7px 4px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.score-grid th:first-child,
+.score-grid td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 220px;
+  background: #fff;
+}
+
+.score-grid th {
+  color: var(--ink);
+}
+
+.score-grid input {
+  width: 40px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.score-grid input.note {
+  width: 76px;
+  margin-top: 4px;
+}
+
+.criterion-title,
+.criterion-test,
+.scenario-links {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.criterion-test {
+  font-size: 10px;
+}
+
+.scenario-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.scenario-chip {
+  padding: 3px 5px;
+  font-size: 8px;
+  text-transform: none;
+}

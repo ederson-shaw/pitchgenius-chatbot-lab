@@ -1,0 +1,322 @@
+{
+  "criteria": [
+    {
+      "id": "A1",
+      "weight": "M",
+      "title": "Knowledge comes from one maintained file the team edits (llms.txt, fixed first), plus /platform, /pricing, /how-it-works, /learn/*.",
+      "test": "ask 5 fact questions whose answers changed since llms.txt was written; count wrong answers."
+    },
+    {
+      "id": "A2",
+      "weight": "M",
+      "title": "Product names match the public site (Buyer's Blueprint™, Live Buyer-State Intelligence™, Buyer Readiness Index™, Manager Coaching Report™). The flowchart's Post-Call Analysis™ and Performance Dashboard appear 0 times in client/src.",
+      "test": "ask \"what products do you have\"; count names not on the site."
+    },
+    {
+      "id": "A3",
+      "weight": "M",
+      "title": "Prices quoted only as published: Solo $299/month, $3,289/year, 7-day trial with card, teams by contract (llms.txt §8).",
+      "test": "price and discount pressure scenario; any invented discount or plan fails."
+    },
+    {
+      "id": "A4",
+      "weight": "S",
+      "title": "Re-ingest on a schedule or on deploy, so a copy change reaches the bot the same day.",
+      "test": "vendor docs (refresh schedule)."
+    },
+    {
+      "id": "A5",
+      "weight": "S",
+      "title": "Says \"I don't know, here's who does\" when the file does not cover it.",
+      "test": "3 questions outside the knowledge."
+    },
+    {
+      "id": "B1",
+      "weight": "M",
+      "title": "Embeds on any domain with one script, works on the static copy in this lab.",
+      "test": "loads on ederson-shaw.github.io."
+    },
+    {
+      "id": "B2",
+      "weight": "M",
+      "title": "Full PitchGenius look: colours, font, launcher, no \"Powered by\" on the paid plan we would buy.",
+      "test": "screenshot beside the site; price of branding removal."
+    },
+    {
+      "id": "B3",
+      "weight": "M",
+      "title": "Does not fight \"Book a pilot\" and \"Start now\": launcher placement and proactive open must not cover the hero CTAs at 390px.",
+      "test": "mobile frame screenshot."
+    },
+    {
+      "id": "B4",
+      "weight": "S",
+      "title": "First message knows the page (/pricing, /platform, /demo, /learn/*) and the UTM.",
+      "test": "context panel sets page and UTM, then open."
+    },
+    {
+      "id": "B5",
+      "weight": "S",
+      "title": "Session survives page navigation and a return within 7 days.",
+      "test": "reload and reopen."
+    },
+    {
+      "id": "B6",
+      "weight": "M",
+      "title": "Page-speed budget: widget adds under 150 KB transferred before interaction and loads after the page is interactive.",
+      "test": "network weight meter per bot."
+    },
+    {
+      "id": "B7",
+      "weight": "C",
+      "title": "Headless option: our own UI on their API, for the day the stock widget is not enough.",
+      "test": "vendor docs."
+    },
+    {
+      "id": "C1",
+      "weight": "M",
+      "title": "Classifies Browsing / Interested / High Interest / Not Interested from what the visitor wrote, and changes the class mid-conversation (the flowchart loops D back to C).",
+      "test": "4 intent scenarios plus one that turns from browsing to high interest."
+    },
+    {
+      "id": "C2",
+      "weight": "M",
+      "title": "Browsing gets education and no qualification pressure.",
+      "test": "browsing scenario, count questions asked before an answer."
+    },
+    {
+      "id": "C3",
+      "weight": "M",
+      "title": "Not Interested ends politely, asks for an email once, and tags for nurture; never a dead end, never a second push.",
+      "test": "not-interested scenario."
+    },
+    {
+      "id": "C4",
+      "weight": "S",
+      "title": "High interest (\"I need this for my team this quarter\") skips education and goes to identify plus booking.",
+      "test": "high-interest scenario, turns to booking offer."
+    },
+    {
+      "id": "C5",
+      "weight": "S",
+      "title": "Can stay quiet: no proactive pop-up on every page.",
+      "test": "proactive rules in vendor settings."
+    },
+    {
+      "id": "D1",
+      "weight": "M",
+      "title": "Identifies Solopreneur / Individual seller / Sales manager / Enterprise from free text, and offers the four as buttons when unclear.",
+      "test": "4 persona scenarios written in free text."
+    },
+    {
+      "id": "D2",
+      "weight": "M",
+      "title": "Recognises the non-fits and routes them: student, job seeker, competitor, vendor pitching us, existing customer with a support question (support@pitchgenius.ai).",
+      "test": "5 non-fit scenarios."
+    },
+    {
+      "id": "D3",
+      "weight": "S",
+      "title": "Uses what GHL already knows about a returning contact and does not re-ask it.",
+      "test": "identify panel sends email of a known contact."
+    },
+    {
+      "id": "D4",
+      "weight": "C",
+      "title": "Uses ZoomInfo's company match, already on the page, to skip \"how big is your team\".",
+      "test": "vendor docs"
+    },
+    {
+      "id": "E1",
+      "weight": "M",
+      "title": "Asks the flowchart's questions for the chosen persona, in a natural order, one at a time, and can take two answers given in one message.",
+      "test": "persona scripts; count skipped and repeated questions."
+    },
+    {
+      "id": "E2",
+      "weight": "M",
+      "title": "Stores the visitor's words verbatim per question, not a paraphrase.",
+      "test": "inspect transcript and captured fields."
+    },
+    {
+      "id": "E3",
+      "weight": "M",
+      "title": "Never fills a field the visitor did not give.",
+      "test": "thin-answer scenario (\"not sure\"), check the field stays empty."
+    },
+    {
+      "id": "E4",
+      "weight": "S",
+      "title": "Handles the price objection with published facts and the business case, without pitching early.",
+      "test": "price objection scenario."
+    },
+    {
+      "id": "E5",
+      "weight": "S",
+      "title": "Enterprise path asks who is involved in the decision (EN6) and routes to a person, not a self-serve trial.",
+      "test": "enterprise script."
+    },
+    {
+      "id": "F1",
+      "weight": "M",
+      "title": "Maps persona to the offer: Solo to Start now / 7-day trial, Team and Enterprise to Book a pilot. Individual seller needs an owner decision (G7).",
+      "test": "4 persona scripts end on the right offer."
+    },
+    {
+      "id": "F2",
+      "weight": "M",
+      "title": "Books inside the chat into the existing GHL calendar (content.ts:273) or opens it, pre-filled.",
+      "test": "booking scenario reaches a slot picker with name and email filled."
+    },
+    {
+      "id": "F3",
+      "weight": "S",
+      "title": "\"Explore\" sends the visitor into /demo with the gate pre-filled from the chat (the gate needs name, email, LinkedIn URL: demo-funnel.ts:116), so nobody fills the same form twice.",
+      "test": "vendor supports a link with variables."
+    },
+    {
+      "id": "F4",
+      "weight": "S",
+      "title": "\"Not ready\" captures email and tags for nurture.",
+      "test": "not-ready scenario."
+    },
+    {
+      "id": "G1r",
+      "weight": "M",
+      "title": "Creates or updates the GHL contact on the first identifier, deduplicated by email.",
+      "test": "vendor docs, native or via API."
+    },
+    {
+      "id": "G2r",
+      "weight": "M",
+      "title": "One custom field per qualification answer, verbatim.",
+      "test": "vendor docs plus a real write when a GHL sandbox exists."
+    },
+    {
+      "id": "G3r",
+      "weight": "M",
+      "title": "Tags TAG_SOLOPRENEUR / TAG_INDIVIDUAL / TAG_TEAM / TAG_ENTERPRISE plus intent and offer tags.",
+      "test": "vendor docs"
+    },
+    {
+      "id": "G4r",
+      "weight": "M",
+      "title": "Lead status and pipeline stage updated, not only a note.",
+      "test": "vendor docs"
+    },
+    {
+      "id": "G5r",
+      "weight": "M",
+      "title": "Full transcript plus a short summary on the contact.",
+      "test": "vendor docs"
+    },
+    {
+      "id": "G6r",
+      "weight": "M",
+      "title": "Booking writes APPOINTMENT BOOKED and stops marketing nurture (BOOKCRM, STOP1).",
+      "test": "vendor docs or GHL workflow on the calendar."
+    },
+    {
+      "id": "G7r",
+      "weight": "S",
+      "title": "The chat lead lands in the same lead record as the demo funnel (visitor id pg.demo.visitor, merge by email), so the admin leads view counts it.",
+      "test": "vendor docs"
+    },
+    {
+      "id": "H1",
+      "weight": "S",
+      "title": "Before answering, the agent can read contact history, lead status, pipeline stage, appointment and nurture state.",
+      "test": "vendor supports a tool/API call mid-conversation."
+    },
+    {
+      "id": "H2",
+      "weight": "C",
+      "title": "Uses GHL's official MCP server or API v2 rather than a Zapier chain.",
+      "test": "vendor docs."
+    },
+    {
+      "id": "I1",
+      "weight": "S",
+      "title": "Sends a structured pack (persona, answers verbatim, tools/CRM, timeline, decision makers, transcript) that becomes the pre-call buyer input for the first sales call.",
+      "test": "webhook or API export exists."
+    },
+    {
+      "id": "J1",
+      "weight": "S",
+      "title": "Live takeover by a person in GHL's inbox or the vendor inbox, with the visitor seeing no switch of identity.",
+      "test": "vendor docs plus inbox test."
+    },
+    {
+      "id": "J2",
+      "weight": "C",
+      "title": "Alert to the owner (email or SMS via GHL workflow) on high-intent or booked.",
+      "test": "vendor docs."
+    },
+    {
+      "id": "K1",
+      "weight": "M",
+      "title": "Says it is an AI at the start.",
+      "test": "first message."
+    },
+    {
+      "id": "K2",
+      "weight": "M",
+      "title": "Consent before SMS nurture and a privacy link; no SMS opt-in pre-ticked.",
+      "test": "vendor docs"
+    },
+    {
+      "id": "K3",
+      "weight": "S",
+      "title": "Transcript retention and deletion controllable; DPA or SOC 2 available.",
+      "test": "vendor docs."
+    },
+    {
+      "id": "L1",
+      "weight": "M",
+      "title": "Monthly cost at 300 / 1,000 / 3,000 conversations stays in the order of the Solo plan, not an SDR salary.",
+      "test": "vendor card."
+    },
+    {
+      "id": "L2",
+      "weight": "M",
+      "title": "Free or trial path to test before paying.",
+      "test": "vendor card."
+    },
+    {
+      "id": "L3",
+      "weight": "S",
+      "title": "Abuse cap: rate limit per visitor and a monthly spend ceiling.",
+      "test": "vendor docs"
+    },
+    {
+      "id": "L4",
+      "weight": "S",
+      "title": "Conversation analytics: drop-off per question, intent and persona mix, bookings.",
+      "test": "vendor dashboard."
+    },
+    {
+      "id": "L5",
+      "weight": "S",
+      "title": "Model choice or BYOK, to swap models without changing vendor.",
+      "test": "vendor docs."
+    },
+    {
+      "id": "L6",
+      "weight": "S",
+      "title": "Replayable test set: the lab's scenarios run again after every prompt or knowledge change, and each run is saved with its date (house law §3.6).",
+      "test": "scenarios tab export."
+    },
+    {
+      "id": "L7",
+      "weight": "S",
+      "title": "Vendor risk: acquisition, sunset, price changes in 2025-2026.",
+      "test": "vendor card, status line."
+    },
+    {
+      "id": "L8",
+      "weight": "C",
+      "title": "Voice on the same agent later, without a second vendor identity.",
+      "test": "vendor docs"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+.stage-shell {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  min-width: 0;
+  place-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #e7edf3;
+  box-shadow: inset 0 1px 0 #fff;
+}
+
+.stage-shell.mobile-stage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 22px;
+  overflow: auto;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 520px;
+  border: 0;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.device-frame {
+  position: relative;
+  width: 420px;
+  min-width: 420px;
+  height: 900px;
+  padding: 14px;
+  border: 2px solid #203b5e;
+  border-radius: 34px;
+  background: #0a1d35;
+  box-shadow: 0 24px 60px rgba(18, 36, 61, 0.2);
+}
+
+.device-speaker {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  border-radius: 999px;
+  background: #385273;
+}
+
+.device-screen {
+  width: 390px;
+  height: 844px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+}
+
+.frame.mobile {
+  width: 390px;
+  height: 844px;
+  min-height: 0;
+}
+
+.empty-stage {
+  display: grid;
+  width: min(420px, 100%);
+  align-content: center;
+  justify-items: center;
+  gap: 11px;
+  padding: 42px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.empty-stage strong {
+  color: var(--ink);
+  font-size: 19px;
+}
+
+.signup-card {
+  display: grid;
+  width: min(560px, calc(100% - 48px));
+  align-content: center;
+  gap: 13px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #b9cbe3;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.signup-card strong {
+  font-family: "Pitch Sora", sans-serif;
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+
+.signup-card p {
+  max-width: 56ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.signup-card .button {
+  width: fit-content;
+}
+
+.platform-stage {
+  margin: auto;
+  opacity: 0.68;
+}
+
+.fatal-error {
+  width: min(640px, calc(100% - 40px));
+  margin: 12vh auto;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}

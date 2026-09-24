@@ -1,0 +1,296 @@
+{
+  "checked": "2026-09-24",
+  "vendors": [
+    {
+      "id": "deep-chat", "name": "Deep Chat", "group": "No signup", "rank": 19, "adapter": "demo",
+      "verdict": "Documented zero-network demo mode.", "noSignup": true, "signupUrl": "", "free": "MIT; no account.",
+      "price": "0; provider cost separate.", "injection": "dom", "ghl": "Custom endpoint only.",
+      "docs": "https://deepchat.dev/docs/modes",
+      "jsApi": ["submitUserMessage", "clearMessages", "scrollToBottom"], "embed": [
+        "<script src=\"https://cdn.jsdelivr.net/npm/deep-chat@2.5.1/dist/deepChat.bundle",
+        ".js\"></script>",
+        "<deep-chat demo='{\"displayLoading\":{\"message\":true}}'></deep-chat>"
+      ], "sources": ["https://deepchat.dev/docs/installation/"]
+    }, {
+      "id": "react-chatbotify", "name": "React Chatbotify", "group": "No signup", "rank": 20,
+      "adapter": "demo", "verdict": "Client-side scripted-flow React demo; no account or backend.", "noSignup": true,
+      "signupUrl": "", "free": "MIT; no account system.", "price": "0; model cost separate.", "injection": "dom",
+      "ghl": "Custom event code only.", "docs": "https://github.com/react-chatbotify/react-chatbotify",
+      "jsApi": ["custom hooks", "custom events"],
+      "embed": "<script type=\"module\">import ChatBot from 'https://esm.sh/react-chatbotify@2.5\n.0';</script>",
+      "sources": ["https://github.com/react-chatbotify/react-chatbotify"]
+    }, {
+      "id": "asyntai", "name": "Asyntai", "group": "GHL ecosystem", "rank": 2, "adapter": "snippet",
+      "verdict": "GHL marketplace bot with transcript notes and tags.", "noSignup": false,
+      "signupUrl": "https://asyntai.com/", "free": "0/mo; 100 AI replies; 14-day trial.",
+      "price": "300: 39/mo; 1,000: 139/mo; 3,000: 449/mo.", "injection": "unconfirmed",
+      "ghl": "Native marketplace app.", "embed": "unconfirmed",
+      "docs": "https://asyntai.com/ai-chatbot-for-leadconnector/",
+      "jsApi": [],
+      "sources": ["https://asyntai.com/ai-chatbot-for-leadconnector/"]
+    }, {
+      "id": "stammer", "name": "Stammer.ai", "group": "GHL ecosystem", "rank": 3, "adapter": "snippet",
+      "verdict": "White-label agent with a native GHL app and webhook path.", "noSignup": false,
+      "signupUrl": "https://stammer.ai/", "free": "7-day trial on Standard.",
+      "price": "300: 68/mo; 1,000: 124/mo; 3,000: 284/mo.", "injection": "unconfirmed",
+      "ghl": "Native app and webhook.", "embed": "unconfirmed",
+      "docs": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/embed-chatbot-on-a-website",
+      "jsApi": [],
+      "sources": ["https://stammer.ai/"]
+    }, {
+      "id": "botpress", "name": "Botpress", "group": "Builders", "rank": 1, "adapter": "snippet",
+      "verdict": "Builder with a full webchat API and GHL hub integration.", "noSignup": false,
+      "signupUrl": "https://botpress.com/", "free": "0/mo; 25 conversations; 3 seats.",
+      "price": "300: 215/mo; 1,000: 670/mo; 3,000: 1,500/mo.", "injection": "shadow",
+      "ghl": "Contacts, opportunities, appointments.",
+      "docs": "https://botpress.com/docs/webchat/get-started/embedding-webchat",
+      "jsApi": ["open", "close", "toggle", "updateUser", "getUser", "config"], "embed": [
+        "<script src=\"https://cdn.botpress.cloud/webchat/v3.3/inject.js\"></script>",
+        "<script>window.botpress.init({botId:'<BOT_ID>',clientId:'<CLIENT_ID>'});</scri",
+        "pt>"
+      ], "sources": ["https://botpress.com/docs/webchat/interact/reference"]
+    }, {
+      "id": "voiceflow", "name": "Voiceflow", "group": "Builders", "rank": 5, "adapter": "snippet",
+      "verdict": "Canvas for scripted and LLM steps with a web chat API.", "noSignup": false,
+      "signupUrl": "https://www.voiceflow.com/", "free": "Free trial; no card required.", "price": "Unconfirmed.",
+      "injection": "shadow", "ghl": "No native connector.",
+      "docs": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api",
+      "jsApi": ["open", "close", "show", "hide", "showPopover", "hidePopover"], "embed": [
+        "<script>window.voiceflow.chat.load({verify:{projectID:'<PROJECT_ID>'},url:'htt",
+        "ps://general-runtime.voiceflow.com',versionID:'production'});</script>"
+      ], "sources": ["https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"]
+    }, {
+      "id": "typebot", "name": "Typebot", "group": "Builders", "rank": 4, "adapter": "snippet",
+      "verdict": "Scripted builder; AI blocks use your key and GHL uses webhooks.", "noSignup": false,
+      "signupUrl": "https://typebot.com/", "free": "0/mo; 200 chats.", "price": "300 and 1,000: 39/mo; 3,000: 59/mo.",
+      "injection": "shadow", "ghl": "Webhook or integration bridge.",
+      "docs": "https://docs.typebot.com/deploy/web/html-javascript",
+      "jsApi": ["open", "close", "toggle", "setPrefilledVariables", "setInputValue", "submitInput"], "embed": [
+        "<script type=\"module\">import Typebot from 'https://cdn.jsdelivr.net/npm/@typeb",
+        "ot.io/js@0/dist/web.js';Typebot.initBubble({typebot:'<TYPEBOT_ID>'});</script>"
+      ], "sources": ["https://docs.typebot.com/deploy/web/html-javascript"]
+    }, {
+      "id": "landbot", "name": "Landbot", "group": "Builders", "rank": 13, "adapter": "snippet",
+      "verdict": "Scripted quiz builder; GHL uses third-party bridges.", "noSignup": false,
+      "signupUrl": "https://landbot.io/", "free": "0/mo; 100 chats.",
+      "price": "300: 40/mo; 2,500 chats: 80/mo annual.", "injection": "shadow", "ghl": "n8n, Zapier or Make.",
+      "docs": "https://dev.landbot.io/docs",
+      "jsApi": ["open", "close", "onLoad", "setCustomData", "sendMessage", "on"], "embed": [
+        "<script src=\"https://static.landbot.io/landbot-3/landbot-3.0.0.js\"></script>",
+        "<script>var myLandbot=new Landbot.Livechat({configUrl:'https://landbot.io/v3/H",
+        "-<BOT_ID>/index.json'});</script>"
+      ], "sources": ["https://dev.landbot.io/docs"]
+    }, {
+      "id": "dify", "name": "Dify", "group": "Builders", "rank": 14, "adapter": "snippet",
+      "verdict": "Open builder with a website embed but no client-side widget API.", "noSignup": false,
+      "signupUrl": "https://dify.ai/", "free": "0/mo; 200 credits.", "price": "Unconfirmed.", "injection": "iframe",
+      "ghl": "No native connector.", "docs": "https://docs.dify.ai/en/use-dify/publish/webapp/embedding-in-websites",
+      "jsApi": [], "embed": [
+        "<script>window.difyChatbotConfig={token:'<TOKEN>',baseUrl:'https://udify.app'}",
+        ";</script>",
+        "<script src=\"https://udify.app/embed.min.js\" id=\"<TOKEN>\" defer></script>"
+      ], "sources": ["https://dify.ai/pricing"]
+    }, {
+      "id": "tars", "name": "Tars", "group": "Builders", "rank": 7, "adapter": "snippet",
+      "verdict": "Website sales agent with dashboard widget and calendar tools.", "noSignup": false,
+      "signupUrl": "https://hellotars.com/", "free": "0/mo; 50 conversations.",
+      "price": "499/mo floor; 300 and 1,000 unconfirmed.", "injection": "unconfirmed",
+      "ghl": "Automation bridge required.", "docs": "https://hellotars.com/docs",
+      "jsApi": [], "embed": [
+        "<script>window.tarsSettings={convid:'<CONVERSATION_ID>',mode:'pop_left'};</scr",
+        "ipt>",
+        "<script src=\"https://widget.hellotars.com/script/widget.min.js\"></script>"
+      ], "sources": ["https://hellotars.com/pricing"]
+    }, {
+      "id": "chatbase", "name": "Chatbase", "group": "Website-trained AI", "rank": 6, "adapter": "snippet",
+      "verdict": "Website-trained benchmark with identity, booking and custom actions.", "noSignup": false,
+      "signupUrl": "https://www.chatbase.co/", "free": "0/mo; 50 message credits.",
+      "price": "300: 150/mo; 1,000: 230/mo; 3,000: 620/mo.", "injection": "unconfirmed",
+      "ghl": "Custom action or webhook.", "docs": "https://www.chatbase.co/docs/developer-guides/javascript-embed",
+      "jsApi": ["chatbase('open')"], "embed": [
+        "<script>window.chatbaseConfig={chatbotId:'<AGENT_ID>'};</script>",
+        "<script src=\"https://www.chatbase.co/embed.min.js\" chatbotId=\"<AGENT_ID>\" defe",
+        "r></script>"
+      ], "sources": ["https://www.chatbase.co/pricing"]
+    }, {
+      "id": "chatling", "name": "Chatling", "group": "Website-trained AI", "rank": 12, "adapter": "snippet",
+      "verdict": "Low-cost website RAG widget with variables and SDK methods.", "noSignup": false,
+      "signupUrl": "https://chatling.ai/", "free": "0/mo; 200 AI credits.",
+      "price": "300: 25/mo; 1,000: 75/mo; 3,000: 295/mo.", "injection": "unconfirmed", "ghl": "No GHL path.",
+      "docs": "https://docs.chatling.ai/web-widget/widget-sdk.md",
+      "jsApi": ["open", "minimize", "hideChatIcon", "showChatIcon", "destroy", "setVariables"], "embed": [
+        "<script>window.chtlConfig={chatbotId:'<WIDGET_ID>'};</script>",
+        "<script async data-id=\"<WIDGET_ID>\" id=\"chtl-script\" src=\"https://chatling.ai/",
+        "js/embed.js\"></script>"
+      ], "sources": ["https://chatling.ai/pricing"]
+    }, {
+      "id": "docsbot", "name": "DocsBot", "group": "Website-trained AI", "rank": 8, "adapter": "snippet",
+      "verdict": "Website-trained widget with a complete small-provider JS API.", "noSignup": false,
+      "signupUrl": "https://docsbot.ai/", "free": "0/mo; 100 AI credits.",
+      "price": "300: 49/mo; 1,000: 49 to 149/mo; 3,000: 149/mo.", "injection": "unconfirmed",
+      "ghl": "Custom GHL code via lead events.",
+      "docs": "https://docsbot.ai/documentation/developer/embeddable-chat-widget",
+      "jsApi": ["init", "open", "close", "toggle", "unmount", "addUserMessage"], "embed": [
+        "<script src=\"https://widget.docsbot.ai/widget.js\" defer></script>",
+        "<script>DocsBotAI.init({id:'<TEAM_ID>/<BOT_ID>'});</script>"
+      ], "sources": ["https://docsbot.ai/pricing"]
+    }, {
+      "id": "elfsight", "name": "Elfsight AI Chatbot", "group": "Website-trained AI", "rank": 16,
+      "adapter": "snippet", "verdict": "Dashboard-configured chatbot with page-DOM rendering and custom CSS.",
+      "noSignup": false, "signupUrl": "https://elfsight.com/ai-chatbot-widget/",
+      "free": "0/mo; 50 messages; 200 views.", "price": "5/mo; 10/mo.", "injection": "dom",
+      "ghl": "No native connector.", "docs": "https://elfsight.com/ai-chatbot-widget/",
+      "jsApi": [], "embed": [
+        "<script src=\"https://static.elfsight.com/platform/platform.js\" async></script>",
+        "<div class=\"elfsight-app-<WIDGET_ID>\"></div>"
+      ], "sources": ["https://elfsight.com/ai-chatbot-widget/pricing/"]
+    }, {
+      "id": "wonderchat", "name": "Wonderchat", "group": "Website-trained AI", "rank": 15,
+      "adapter": "snippet", "verdict": "Website-trained agent with an unconfirmed literal embed.", "noSignup": false,
+      "signupUrl": "https://wonderchat.io/", "free": "0/mo; 20 credits; about 10 resolutions.",
+      "price": "124/mo; 417/mo.", "injection": "unconfirmed", "ghl": "No native connector.", "embed": "unconfirmed",
+      "docs": "https://docs.wonderchat.io/api-reference/client-sdk",
+      "jsApi": [
+        "toggleChat",
+        "chatbotIdentify",
+        "prefillChatbotQuestion",
+        "changeChatbotId",
+        "clearChatbotHistory",
+        "chatbotLoaded"
+      ], "sources": ["https://wonderchat.io/pricing"]
+    }, {
+      "id": "tidio", "name": "Tidio + Lyro", "group": "Live chat with AI", "rank": 10, "adapter": "snippet",
+      "verdict": "SMB live chat SDK with Lyro metered above seats.", "noSignup": false,
+      "signupUrl": "https://www.tidio.com/", "free": "No free AI; 50 Lyro conversations entry block.",
+      "price": "300: 244/mo; 1,000: 699/mo.", "injection": "iframe", "ghl": "No native connector.",
+      "embed": "<script src=\"//code.tidio.co/<ACCOUNT_KEY>.js\" async></script>",
+      "docs": "https://developers.tidio.com/docs/widget-other-methods",
+      "jsApi": ["open", "method('chatDisplay')", "method('messageFromVisitor')", "setStatus", "on"],
+      "sources": ["https://developers.tidio.com/"]
+    }, {
+      "id": "freshchat", "name": "Freshchat / Freddy AI", "group": "Live chat with AI", "rank": 11,
+      "adapter": "snippet", "verdict": "Free live chat with Freddy AI sessions above Freshworks seats.",
+      "noSignup": false, "signupUrl": "https://www.freshworks.com/live-chat-software/",
+      "free": "0/mo; up to 10 agents; 500 AI sessions paid.", "price": "300: 19/mo seat; 1,000: 264/mo example.",
+      "injection": "unconfirmed", "ghl": "No native connector.",
+      "embed": "<script src='//fw-cdn.com/<ACCOUNT_ID>/<WIDGET_ID>.js' chat='true'></script>",
+      "docs": "https://developers.freshchat.com/web-sdk/v2/",
+      "jsApi": ["open", "close", "show", "hide", "setExternalId", "user.create"],
+      "sources": ["https://developers.freshchat.com/web-sdk/v2/"]
+    }, {
+      "id": "jivochat", "name": "JivoChat", "group": "Live chat with AI", "rank": 17, "adapter": "snippet",
+      "verdict": "Free live chat plus a seat-priced AI agent.", "noSignup": false,
+      "signupUrl": "https://www.jivochat.com/", "free": "0/mo; 5 agents; 14-day trial.",
+      "price": "AI agent: 69/mo per seat.", "injection": "unconfirmed",
+      "ghl": "No native app; third-party connector.",
+      "embed": "<script src=\"//code.jivosite.com/widget/<WIDGET_ID>\" async></script>",
+      "docs": "https://www.jivochat.com/docs/widget/",
+      "jsApi": ["open", "close", "setContactInfo", "sendPageTitle", "setCustomData", "showProactiveInvitation"],
+      "sources": ["https://www.jivochat.com/docs/widget/"]
+    }, {
+      "id": "intercom", "name": "Fin (formerly Intercom)", "group": "Live chat with AI", "rank": 9,
+      "adapter": "snippet", "verdict": "Support AI with a rich SDK and expensive qualification outcomes.",
+      "noSignup": false, "signupUrl": "https://www.intercom.com/", "free": "No free tier; 29/mo Essential seat.",
+      "price": "300: 3,026/mo; 1,000: 10,019/mo; 3,000: 30,000/mo.", "injection": "iframe",
+      "ghl": "No native connector.", "docs": "https://developers.intercom.com/installing-intercom/web/methods/",
+      "jsApi": ["show", "showNewMessage", "showSpace", "hide", "boot", "startConversation"], "embed": [
+        "<script>window.intercomSettings={app_id:'<APP_ID>'};</script>",
+        "<script>window.Intercom('boot',window.intercomSettings);</script>"
+      ], "sources": ["https://developers.intercom.com/installing-intercom/web/methods/"]
+    }, {
+      "id": "yellow", "name": "Yellow.ai", "group": "Enterprise with a free plan", "rank": 18,
+      "adapter": "snippet", "verdict": "Enterprise conversational AI with a free 500-session plan.",
+      "noSignup": false, "signupUrl": "https://yellow.ai/", "free": "0/mo; 1 agent; 2 seats; 500 sessions.",
+      "price": "0 to 500 sessions; 0.99/resolution overage; 1,000: 495/mo.", "injection": "unconfirmed",
+      "ghl": "No native connector.",
+      "docs": "https://docs.yellow.ai/docs/platform_concepts/channelConfiguration/web-widget",
+      "jsApi": [], "embed": [
+        "<script>window.ymConfig={bot:'<BOT_ID>',host:'https://cloud.yellow.ai'};</scri",
+        "pt>",
+        "<script src=\"https://cdn.yellowmessenger.com/plugin/widget-v2/latest/dist/main",
+        ".min.js\"></script>"
+      ], "sources": ["https://yellow.ai/pricing/"]
+    }, {
+      "id": "tawk", "name": "tawk.to", "group": "More", "adapter": "snippet",
+      "verdict": "Free live chat with a visitor API; AI is an add-on.", "noSignup": false,
+      "signupUrl": "https://www.tawk.to/", "free": "0/mo core chat; unlimited agents and history.",
+      "price": "AI Assist from 29/mo.", "injection": "iframe", "ghl": "Zapier bridge; no native app.",
+      "docs": "https://developer.tawk.to/jsapi/",
+      "jsApi": ["maximize", "minimize", "toggle", "showWidget", "hideWidget", "setAttributes"], "embed": [
+        "<script>var Tawk_API=Tawk_API||{};</script>",
+        "<script src=\"https://embed.tawk.to/<PROPERTY_ID>/<WIDGET_ID>\"></script>"
+      ], "sources": ["https://developer.tawk.to/jsapi/"]
+    }, {
+      "id": "crisp", "name": "Crisp", "group": "More", "adapter": "snippet",
+      "verdict": "Rich live-chat API; free plan has no AI credits.", "noSignup": false,
+      "signupUrl": "https://crisp.chat/", "free": "0/mo; 2 seats; no AI credits.",
+      "price": "300: 95/mo; 1,000: 295/mo; 3,000: 295/mo plus credits.", "injection": "unconfirmed",
+      "ghl": "No native connector.", "docs": "https://docs.crisp.chat/guides/chatbox-sdks/web-sdk/dollar-crisp/",
+      "jsApi": ["chat:open", "chat:close", "user:email", "message:send", "session:segments", "session:event"],
+      "embed": [
+        "<script>window.CRISP_WEBSITE_ID='<WEBSITE_ID>';</script>",
+        "<script src=\"https://client.crisp.chat/l.js\" async></script>"
+      ], "sources": ["https://crisp.chat/en/pricing/"]
+    }, {
+      "id": "kapa", "name": "Kapa.ai", "group": "More", "adapter": "snippet",
+      "verdict": "Developer-support widget with a no-card trial and partial JS confirmation.", "noSignup": false,
+      "signupUrl": "https://app.kapa.ai/", "free": "0 for 14 days; 1 index; 5,000 pages; 1,000 answers.",
+      "price": "Growth and Enterprise: contact sales.", "injection": "unconfirmed", "ghl": "No native connector.",
+      "docs": "https://docs.kapa.ai/integrations/website-widget",
+      "jsApi": ["Kapa open/close functions", "events API"], "embed": [
+        "<script async src=\"https://widget.kapa.ai/kapa-widget.bundle.js\" data-website-",
+        "id=\"<INTEGRATION_ID>\" data-project-name=\"<PROJECT_NAME>\"></script>"
+      ], "sources": ["https://www.kapa.ai/pricing"]
+    }, {
+      "id": "hubspot", "name": "HubSpot chat + Breeze", "group": "More", "adapter": "snippet",
+      "verdict": "Free chat; Breeze needs a paid Hub and locks CRM data into HubSpot.", "noSignup": false,
+      "signupUrl": "https://www.hubspot.com/", "free": "0/mo live chat; AI needs paid Hub.",
+      "price": "300: 135/mo; 1,000: 450/mo credits plus Hub.", "injection": "iframe",
+      "ghl": "No native or bridge path.", "embed": "unconfirmed",
+      "docs": "https://developers.hubspot.com/docs/reference/api/conversations/chat-widget-sdk",
+      "jsApi": ["widget.load", "widget.open", "widget.close", "widget.remove", "widget.refresh", "widget.status"],
+      "sources": ["https://www.hubspot.com/pricing/marketing/chat"]
+    }, {
+      "id": "own", "name": "PitchGenius agent (ours)", "group": "More", "adapter": "own",
+      "verdict": "Own agent transports model output and accumulates the GHL payload.", "noSignup": true,
+      "signupUrl": "", "free": "No account; key stays in this browser.",
+      "price": "0.004 to 0.08 per conversation; 3,000: 13 to 250/mo.", "injection": "dom",
+      "ghl": "Production route uses the server GHL client.", "embed": "unconfirmed",
+      "docs": "https://openrouter.ai/docs/api-reference/authentication",
+      "jsApi": ["open", "close", "identify", "context", "reset", "send"],
+      "sources": ["https://openrouter.ai/docs/api-reference/authentication"]
+    }, {
+      "id": "ghl", "name": "GoHighLevel Conversation AI", "group": "Platform stage", "platform": true,
+      "adapter": "snippet", "verdict": "Platform-stage candidate; owner's native widget decision is pending.",
+      "noSignup": false, "signupUrl": "https://help.gohighlevel.com/support/solutions/articles/48001191051",
+      "free": "Pay-per-use has no monthly AI fee; account required.",
+      "price": "97/mo; 0.25 in and 2.00 out per 1M tokens.", "injection": "unconfirmed",
+      "ghl": "Native by definition; decision pending.", "embed": "unconfirmed",
+      "docs": "https://help.gohighlevel.com/support/solutions/articles/48001191051",
+      "jsApi": [],
+      "sources": ["https://help.gohighlevel.com/support/solutions/articles/48001191051"]
+    }, {
+      "id": "closebot", "name": "CloseBot", "group": "Platform stage", "platform": true, "adapter": "snippet",
+      "verdict": "Platform-stage candidate; native GHL decision is pending.", "noSignup": false,
+      "signupUrl": "https://closebot.com/", "free": "Account required; pricing unconfirmed.", "price": "Unconfirmed.",
+      "injection": "unconfirmed", "ghl": "Native GHL route unconfirmed.", "embed": "unconfirmed",
+      "docs": "https://closebot.com/",
+      "jsApi": [],
+      "sources": ["https://closebot.com/"]
+    }
+  ],
+  "rejected": [
+    "Qualified/Piper: Salesforce-only; no public price. Drift: sunset by Salesloft; 1mind successor.",
+    "1mind: demo-gated avatars. Warmly: acquisition path and 20,000/yr tier.",
+    "Chili Piper: scheduling, not chatbot. Flowise: Workday acquisition; repo archived 2026-08-13.",
+    "OpenAI Agent Builder: shutdown 2026-11-30. CustomGPT.ai: no free tier.",
+    "SiteGPT: no free tier or qualification. Assistable.ai: 225/mo minimum.",
+    "BotUI: missing maintained CDN bundle. NLUX: packages frozen 2024-08-15.",
+    "Rasa webchat: stale 2021 CDN; no public demo. Chatfuel, GPTBots, Stack AI, Coze: account-gated.",
+    "Zapier Chatbots, Kommunicate: account-gated; no public embed. YourGPT, Expertise AI: account-gated.",
+    "Chaport, Chatra, Smartsupp, Olark: no qualifying AI/no-signup path. Zendesk, LiveChat/ChatBot.com: paid.",
+    "Lime Connect: no public widget. Zoho SalesIQ: no qualifying demo; USD price unverified.",
+    "Copilot Studio: tenant setup. Dialogflow, Lex, watsonx, Kore.ai, Ada, Inkeep: enterprise deployment.",
+    "Dify: no documented client-side widget API."
+  ]
+}

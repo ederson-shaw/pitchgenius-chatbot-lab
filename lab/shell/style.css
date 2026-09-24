@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "Pitch Manrope";
+  src: url("../../home-assets/fonts/4c9affa5bc8f420e-s.p-3bf987f1fc.woff2")
+    format("woff2");
+  font-weight: 200 800;
+}
+
+@font-face {
+  font-family: "Pitch Sora";
+  src: url("../../home-assets/fonts/3dc379dc9b5dec12-s.p-cad4651bfd.woff2")
+    format("woff2");
+  font-weight: 400 800;
+}
+
+:root {
+  --ink: #12243d;
+  --muted: #718095;
+  --line: #dce4ec;
+  --canvas: #f3f6f8;
+  --paper: #fff;
+  --blue: #2d61d4;
+  --blue-soft: #e8efff;
+  --orange: #f37351;
+  --orange-soft: #fff0eb;
+  --green: #28a77a;
+  --shadow: 0 18px 45px rgba(18, 36, 61, 0.08);
+  color: var(--ink);
+  background: var(--canvas);
+  font:
+    14px "Pitch Manrope",
+    system-ui,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0;
+  background: var(--canvas);
+}
+
+#app {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(45, 97, 212, 0.3);
+  outline-offset: 2px;
+}
+
+.topbar {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  min-height: 64px;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 24px;
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  min-width: 205px;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-mark {
+  display: inline-flex;
+  width: 19px;
+  height: 19px;
+  align-items: center;
+  justify-content: center;
+  border: 0.09rem solid #1ebeb4;
+  border-radius: 50%;
+}
+
+.site-mark-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1ebeb4;
+}
+
+.brand-name {
+  font-family: "Pitch Sora", sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.03em;
+}
+
+.brand-divider {
+  color: #506781;
+  font-weight: 400;
+}
+
+.brand-label {
+  color: #9db3d1;
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.vendor-nav {
+  position: relative;
+  display: flex;
+  height: 42px;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  overflow: visible;
+}
+
+.chip-groups {
+  display: flex;
+  height: 42px;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
+  scrollbar-width: thin;
+  white-space: nowrap;
+}
+
+.chip-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.chip-category {
+  margin-right: 2px;
+  color: #7187a2;
+  font:
+    9px "DM Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vendor-chip,
+.top-link,
+.top-button {
+  border: 1px solid #3a506d;
+  border-radius: 7px;
+  color: #dce9f8;
+  background: transparent;
+}
+
+.vendor-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 7px 9px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.chip-rank {
+  color: #9db3d1;
+  font:
+    10px "DM Mono",
+    monospace;
+}
+
+.vendor-chip:hover,
+.vendor-chip.active,
+.top-link:hover,
+.top-button.active,
+.top-button:hover {
+  border-color: #7f9bd1;
+  background: #243f63;
+}
+
+.vendor-chip:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.status-dot.warn {
+  background: var(--orange);
+}
+
+.more-wrap {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.more-menu {
+  position: fixed;
+  z-index: 20;
+  top: 58px;
+  right: 0;
+  display: grid;
+  min-width: 250px;
+  gap: 5px;
+  padding: 9px;
+  border: 1px solid #3a506d;
+  border-radius: 10px;
+  background: #172f50;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.22);
+}
+
+.top-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+}
+
+.top-link,
+.top-button {
+  padding: 8px 10px;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.layout {
+  display: grid;
+  width: 100%;
+  min-height: 0;
+  flex: 1 1 0;
+  overflow: hidden;
+  grid-template-columns: minmax(0, 1fr) 430px;
+}
+
+.layout.drawer-closed {
+  grid-template-columns: minmax(0, 1fr) 0;
+}
+
+.stage-wrap {
+  min-width: 0;
+  min-height: 0;
+  padding: 18px 22px 22px;
+  overflow: auto;
+}
