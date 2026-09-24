@@ -2,6 +2,7 @@ import { makeActions } from "./actions.js";
 import { bootFrame } from "./frame.js";
 import { renderDrawer, renderPanel } from "./drawer.js";
 import { renderStage } from "./stage.js";
+import { renderChecklist } from "../panels/checklist.js";
 import {
   addEvent,
   currentAdapter,
@@ -40,9 +41,20 @@ function refreshPanel() {
 
 function render() {
   const item = currentAdapter();
+  const checklist =
+    window.innerWidth > 1100
+      ? renderChecklist({
+          vendor: data.vendors.vendors.find(
+            (vendor) => vendor.id === state.bot,
+          ),
+          checklist: data.checklist,
+          escapeHtml,
+        })
+      : "";
 
   app.innerHTML = `${renderTopbar()}
     <main class="layout ${state.drawer ? "" : "drawer-closed"}">
+      ${checklist}
       <section class="stage-wrap" aria-label="Website stage">
         <div class="stage-shell ${state.view === "mobile" ? "mobile-stage" : ""}">
           ${renderStage(item)}

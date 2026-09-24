@@ -267,11 +267,11 @@ a:focus-visible {
   min-height: 0;
   flex: 1 1 0;
   overflow: hidden;
-  grid-template-columns: minmax(0, 1fr) 430px;
+  grid-template-columns: 300px minmax(0, 1fr) 430px;
 }
 
 .layout.drawer-closed {
-  grid-template-columns: minmax(0, 1fr) 0;
+  grid-template-columns: 300px minmax(900px, 1fr) 0;
 }
 
 .stage-wrap {

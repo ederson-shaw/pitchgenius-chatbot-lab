@@ -5,7 +5,7 @@ export const state = {
   bot: params.get("bot") || "",
   view: params.get("view") || "desktop",
   tab: params.get("tab") || localStorage.getItem("pg.lab.tab") || "bots",
-  drawer: true,
+  drawer: window.innerWidth <= 1100,
   moreOpen: false,
   events: [],
   ghl: { turns: [], payload: {} },
@@ -13,11 +13,13 @@ export const state = {
 export const data = {
   scenarios: { groups: [] },
   criteria: { criteria: [] },
+  checklist: { groups: [], vendors: {} },
   vendors: { vendors: [], rejected: [] },
   bots: {},
   adapters: [],
 };
 export const tabs = [
+  "checklist",
   "bots",
   "scenarios",
   "context",
@@ -37,15 +39,17 @@ export async function loadJson(path) {
 }
 
 export async function loadData() {
-  const [scenarios, criteria, vendors, config] = await Promise.all([
+  const [scenarios, criteria, checklist, vendors, config] = await Promise.all([
     loadJson("lab/data/scenarios.json"),
     loadJson("lab/data/criteria.json"),
+    loadJson("lab/data/checklist.json"),
     loadJson("lab/data/vendors.json"),
     loadJson("config/bots.json"),
   ]);
 
   data.scenarios = scenarios;
   data.criteria = criteria;
+  data.checklist = checklist;
   data.vendors = vendors;
   data.bots = config.bots || {};
   data.adapters = makeAdapters(vendors.vendors);

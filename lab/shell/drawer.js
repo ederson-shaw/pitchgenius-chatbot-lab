@@ -1,4 +1,5 @@
 import { renderBots } from "../panels/bots.js";
+import { renderChecklist } from "../panels/checklist.js";
 import { renderBrand } from "../panels/brand.js";
 import { renderContext } from "../panels/context.js";
 import { renderEvents } from "../panels/events.js";
@@ -30,7 +31,11 @@ export function actionButton(item, action, label) {
 }
 
 export function renderDrawer() {
-  const tabButtons = tabs
+  const visibleTabs =
+    window.innerWidth <= 1100
+      ? tabs
+      : tabs.filter((tab) => tab !== "checklist");
+  const tabButtons = visibleTabs
     .map(
       (tab) => `<button class="tab ${tab === state.tab ? "active" : ""}"
         role="tab" aria-selected="${tab === state.tab}" data-tab="${tab}">
@@ -50,6 +55,8 @@ export function renderPanel() {
   const item = currentAdapter();
   const meta = currentVendor();
   const renderers = {
+    checklist: () =>
+      renderChecklist({ vendor: meta, checklist: data.checklist, escapeHtml }),
     bots: () =>
       renderBots({
         item,

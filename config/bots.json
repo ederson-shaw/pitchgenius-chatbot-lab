@@ -74,7 +74,7 @@
       "snippet": ""
     },
     "landbot": {
-      "snippet": ""
+      "snippet": "<script type=\"module\" src=\"https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs\"></script>\n<script type=\"module\">\n  var myLandbot = new Landbot.Livechat({\n    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-3517478-IX868O70HI7LVK7Z/index.json',\n  });\n</script>\n"
     },
     "dify": {
       "snippet": ""

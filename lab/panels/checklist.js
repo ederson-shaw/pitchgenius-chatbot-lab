@@ -8,7 +8,11 @@ const STATUS = {
 function itemRows(group, values, escapeHtml) {
   return group.items
     .map((item) => {
-      const value = values[item.id] || { status: "unknown", how: "not researched yet", source: "" };
+      const value = values[item.id] || {
+        status: "unknown",
+        how: "not researched yet",
+        source: "",
+      };
       const status = STATUS[value.status] || STATUS.unknown;
       const source = value.source
         ? `<a class="checklist-source" href="${escapeHtml(value.source)}" target="_blank" rel="noreferrer">source ↗</a>`
@@ -31,13 +35,22 @@ function itemRows(group, values, escapeHtml) {
 
 function groupCounts(group, values) {
   const totals = { native: 0, build: 0, no: 0, unknown: 0 };
+  const labels = {
+    native: "built in",
+    build: "we build",
+    no: "not possible",
+    unknown: "unknown",
+  };
 
   group.items.forEach((item) => {
     const status = values[item.id]?.status || "unknown";
     totals[status] = (totals[status] || 0) + 1;
   });
 
-  return `${totals.native} built in · ${totals.build} we build · ${totals.no} not possible`;
+  return Object.entries(totals)
+    .filter(([, count]) => count)
+    .map(([status, count]) => `${count} ${labels[status]}`)
+    .join(" · ");
 }
 
 export function renderChecklist({ vendor, checklist, escapeHtml }) {

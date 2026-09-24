@@ -13,23 +13,12 @@
   }
 }
 
-@media (max-width: 700px) {
-  .topbar {
-    height: 64px;
-    min-height: 64px;
-    padding: 13px 16px;
-  }
-
-  .brand {
-    min-width: 0;
-  }
-
-  .brand-divider,
-  .brand-label {
-    display: none;
-  }
-
+@media (max-width: 1100px) {
   .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .layout.drawer-closed {
     grid-template-columns: 1fr;
   }
 
@@ -47,6 +36,23 @@
 
   .stage-wrap {
     padding: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    height: 64px;
+    min-height: 64px;
+    padding: 13px 16px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-divider,
+  .brand-label {
+    display: none;
   }
 
   .device-frame {
