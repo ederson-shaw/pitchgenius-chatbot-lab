@@ -370,114 +370,114 @@
       "vendor": "asyntai",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Auto-crawls up to 50 pages (250/1,000/5,000 on paid tiers) from the client's own site on install.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "intent": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No conversation-design documentation found; reads as FAQ + lead-capture, not a scripted intent classifier.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "persona": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No persona/branching documentation found.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "questions": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No scripted per-persona question-sequence feature found.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "capture": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "Lead capture is confirmed as one event, not structured per-question field storage.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "offer": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No offer/recommendation logic documented.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Appointment booking' is a named Standard-plan ($139/mo) feature; calendar backend not disclosed.",
+          "source": "https://asyntai.com/"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Every lead is auto-tagged natively; point a GHL workflow trigger at that tag to run nurture.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Approved GoHighLevel marketplace app, auto-provisions per sub-account and writes the lead into that sub-account's CRM.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "ghl_fields": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No custom-field write documented beyond the tag + note.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Every captured lead gets tagged automatically' in the GHL sub-account.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "ghl_pipeline": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No pipeline/lead-status write documented.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Chat transcript is attached as a note on the GHL contact automatically.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Point a GHL workflow trigger at the tag Asyntai applies automatically on capture; no direct trigger action found.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "ghl_calendar": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "Appointment booking exists (Standard+) but which calendar it books into is undisclosed.",
+          "source": "https://asyntai.com/"
         },
         "ghl_readback": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No read-back of GHL contact/appointment data documented.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'REST API' is a named Starter-plan ($39/mo)+ feature.",
+          "source": "https://asyntai.com/"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Use the Starter-plan REST API to POST captured lead data to a PitchGenius Intelligence endpoint (exact endpoints undocumented).",
+          "source": "https://asyntai.com/"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Human takeover' is a named Standard-plan ($139/mo)+ feature.",
+          "source": "https://asyntai.com/"
         },
         "ai_disclosure": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No greeting/first-message customization documented in the pages retrieved.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         },
         "branding": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'White-label option' removes branding, gated to Pro ($449/mo)+ per the general pricing table — contradicts the GHL landing page's claim of universal white-label; confirm with vendor.",
+          "source": "https://asyntai.com/"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Free plan, $0/mo, 100 AI replies/month, 1 site, 50 pages; also a 14-day full-feature trial, no card required, on paid tiers.",
+          "source": "https://asyntai.com/ai-chatbot-for-leadconnector/"
         }
       }
     },
@@ -485,114 +485,114 @@
       "vendor": "stammer",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Website scraping into the agent's knowledge base, auto re-scraped every 24h; billed $5/mo per extra 1M characters.",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/knowledge-base-explained/scrape-websites"
         },
         "intent": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No conversation-design/flow-builder documentation describing a slot-schema or intent classifier was found.",
+          "source": "https://stammer.ai/pricing/"
         },
         "persona": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No branching/persona-object documentation found.",
+          "source": "https://stammer.ai/pricing/"
         },
         "questions": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No scripted per-persona question-sequence feature found.",
+          "source": "https://stammer.ai/pricing/"
         },
         "capture": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "'Lead collection' is named but structured per-question field storage is undocumented.",
+          "source": "https://stammer.ai/pricing/"
         },
         "offer": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No offer/recommendation logic documented.",
+          "source": "https://stammer.ai/pricing/"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Scheduling' is a named Standard-plan ($49/mo) inclusion; calendar system undisclosed.",
+          "source": "https://stammer.ai/pricing/"
         },
         "nurture": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "'Lead collection' is named but no nurture-trigger-into-GHL mechanism is documented.",
+          "source": "https://stammer.ai/pricing/"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Documented Custom Webhook path can call GHL's contact API; the native app's 'Send Message to AI Agent' action runs GHL-to-Stammer, not confirmed to write back.",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/gohighlevel-ghl-custom-webhook"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Custom Webhook hook aimed at GHL's custom-fields API; no dedicated field-writer confirmed.",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/gohighlevel-ghl-custom-webhook"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Custom Webhook hook aimed at GHL's tags API; no dedicated tag action confirmed.",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/gohighlevel-ghl-custom-webhook"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Custom Webhook hook aimed at GHL's opportunity/pipeline API.",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/gohighlevel-ghl-custom-webhook"
         },
         "ghl_transcript": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No transcript-to-GHL-contact mechanism documented.",
+          "source": "https://stammer.ai/pricing/"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "The Custom Webhook hook can POST into a GHL 'Inbound Webhook' workflow trigger; the native app's action runs the opposite direction (GHL calls Stammer).",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/gohighlevel-ghl-custom-webhook"
         },
         "ghl_calendar": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "'Scheduling' is named but the calendar backend is undisclosed.",
+          "source": "https://stammer.ai/pricing/"
         },
         "ghl_readback": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No read-back of GHL contact/appointment data documented.",
+          "source": "https://stammer.ai/pricing/"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "MCP support (Pro, $99/mo) plus a documented Custom Webhook path and a Zapier connector.",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/gohighlevel-ghl-custom-webhook"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Use the Custom Webhook or the Pro-plan white-label API to POST captured data to PitchGenius Intelligence.",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/integrations/gohighlevel-ghl-custom-webhook"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Live chat handoff' is a named Standard-plan ($49/mo) inclusion.",
+          "source": "https://stammer.ai/pricing/"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "An 'Initial Messages' pop-up feature or the Base System Prompt sets the first message; write the AI disclosure into it (exact field unconfirmed between the two).",
+          "source": "https://docs.stammer.ai/stammer.ai-docs/chat-ai-agents/ai-chat-widget/initial-messages-pop-up"
         },
         "branding": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Fully White Labeled' + white-label API are named Pro-plan ($99/mo) inclusions; Standard's branding-removal status is unconfirmed.",
+          "source": "https://stammer.ai/pricing/"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "no",
+          "how": "No permanent free plan; Standard/Pro trials (7/14-day) exist but card requirement is not stated.",
+          "source": "https://stammer.ai/pricing/"
         }
       }
     },
@@ -600,114 +600,114 @@
       "vendor": "botpress",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native website/sitemap crawler builds the RAG knowledge base from pitchgenius.ai, with a Bing 'Search The Web' fallback.",
+          "source": "https://botpress.com/docs/studio/concepts/knowledge-base"
         },
         "intent": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No 4-state preset; build with an NLU intent node feeding a Condition branch.",
+          "source": "https://botpress.com/docs"
         },
         "persona": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Visual flow branches + Tables hold per-visitor state; route by declared persona.",
+          "source": "https://botpress.com/docs"
         },
         "questions": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Chained 'Ask a question' flow nodes, one branch per persona.",
+          "source": "https://botpress.com/docs"
         },
         "capture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Tables store each raw text answer as a row/field, no forced paraphrase.",
+          "source": "https://botpress.com/docs"
         },
         "offer": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Flow branch/Condition node routes to an offer message per qualification path.",
+          "source": "https://botpress.com/docs"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native GHL integration action 'Appointments & Calendar Events: create/update'; works on any plan, Plus $150/mo for real volume.",
+          "source": "https://botpress.com/integrations/plus-go-high-level"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Email captured natively via a flow Input node; nurture trigger needs the GHL integration to write a tag/field a GHL workflow watches.",
+          "source": "https://botpress.com/integrations/plus-go-high-level"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native GHL integration action 'Contacts: create/retrieve/update/delete/upsert', maintained by Botpress.",
+          "source": "https://botpress.com/integrations/plus-go-high-level"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Same Upsert Contact action: customFields go in the raw contact JSON; no glue code.",
+          "source": "https://github.com/botpress/growth/blob/master/integrations/gohighlevel/src/misc/custom-schemas.ts (line 52: upsertContact properties as raw JSON)"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "GHL integration's Upsert Contact action takes the raw contact JSON, so tags go in the same call; no glue code.",
+          "source": "https://github.com/botpress/growth/blob/master/integrations/gohighlevel/src/misc/custom-schemas.ts (line 52: upsertContact properties as raw JSON)"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native GHL integration action 'Opportunities: update' moves the pipeline stage.",
+          "source": "https://botpress.com/integrations/plus-go-high-level"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Poll Botpress's own Chat API for the transcript, then write it into the GHL contact via the integration's General API Call/note action.",
+          "source": "https://botpress.com/docs/api-reference/chat-api"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Write a tag/field via the GHL integration's actions, then a GHL workflow triggers off that write.",
+          "source": "https://botpress.com/integrations/plus-go-high-level"
         },
         "ghl_calendar": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Same GHL integration's Appointments & Calendar Events action.",
+          "source": "https://botpress.com/integrations/plus-go-high-level"
         },
         "ghl_readback": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "GHL integration's 'retrieve' actions on contacts/opportunities/appointments read data back mid-conversation.",
+          "source": "https://botpress.com/integrations/plus-go-high-level"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Botpress Chat API (REST) plus the webchat JS Client API (sendEvent/sendMessage) for send/receive.",
+          "source": "https://botpress.com/docs/api-reference/chat-api"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No named PG connector; POST captured slot data to a PitchGenius Intelligence endpoint via the Chat API or a flow webhook.",
+          "source": "https://botpress.com/docs/api-reference/chat-api"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Documented Handoff/HITL feature routes a live conversation to a human.",
+          "source": "https://botpress.com/docs"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "The flow's first Text node is fully author-controlled; write the AI disclosure directly into the greeting.",
+          "source": "https://botpress.com/docs/webchat/get-started/embedding-webchat"
         },
         "branding": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Whitelabel Webchat' setting removes Botpress branding, included from Plus ($150/mo annual) up; absent on Free.",
+          "source": "https://botpress.com/pricing"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Free plan, $0/mo, 25 conversations/month, 3 seats.",
+          "source": "https://botpress.com/pricing"
         }
       }
     },
@@ -715,114 +715,114 @@
       "vendor": "voiceflow",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native Knowledge Base: upload documents, connect URLs, or bulk-import via sitemap.xml, with a configurable per-source refresh rate.",
+          "source": "https://www.voiceflow.com/docs/documentation/build/importing-data-sources"
         },
         "intent": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No 4-state preset; the canvas supports NLU intent-matching nodes you configure yourself.",
+          "source": "https://www.voiceflow.com/docs"
         },
         "persona": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Visual flow branches, matching Grok's 'strong' rating.",
+          "source": "https://www.voiceflow.com/docs"
         },
         "questions": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Deterministic 'Capture' nodes chained per branch.",
+          "source": "https://www.voiceflow.com/docs"
         },
         "capture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Captured variables hold the visitor's raw text.",
+          "source": "https://www.voiceflow.com/docs"
         },
         "offer": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Flow branch node routes to an offer.",
+          "source": "https://www.voiceflow.com/docs"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native calendar integration found; call a calendar API from a custom API-block node.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Email capture via a flow node is native; nurture trigger needs an outbound API-block call to GHL.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL connector, and Voiceflow's own docs say there's no native Zapier action for the Agent/Tool step either; use a raw API-block call or a Zapier webhook trigger.",
+          "source": "https://zapier.com/apps/voiceflow/integrations"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same custom API-block mechanism against GHL's field API.",
+          "source": "https://zapier.com/apps/voiceflow/integrations"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same custom API-block mechanism against GHL's tags API.",
+          "source": "https://zapier.com/apps/voiceflow/integrations"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same custom API-block mechanism against GHL's opportunity API.",
+          "source": "https://zapier.com/apps/voiceflow/integrations"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Voiceflow's REST API family can retrieve transcripts; push them to GHL via an API-block call.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Write a tag/field to GHL via a custom API-block call; a GHL workflow triggers off it.",
+          "source": "https://zapier.com/apps/voiceflow/integrations"
         },
         "ghl_calendar": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native calendar block; call GHL's calendar API from a custom API-block node.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"
         },
         "ghl_readback": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same custom API-block mechanism reading GHL's API.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Voiceflow's own REST API family plus in-canvas API-block/Integration nodes.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Call a PitchGenius Intelligence endpoint from a custom API-block node.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "A documented 'Live Chat Handoff' feature page exists.",
+          "source": "https://www.voiceflow.com/docs/docs/live-chat-handoff"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "The Welcome banner (banner.title/banner.description) or the flow's first step is fully author-controlled; write the AI disclosure into it.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/custom-web-chat-styling"
         },
         "branding": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Powered by Voiceflow' can only be disabled on a Business-plan workspace; Free/Pro keep it, and Business has no public price.",
+          "source": "https://www.voiceflow.com/docs/documentation/deploy/widget/embedding-the-chat-widget"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Public pricing page states 'Free trial, no credit card required'; an internal Free plan name also still exists, though no allotment is published.",
+          "source": "https://www.voiceflow.com/pricing"
         }
       }
     },
@@ -830,114 +830,114 @@
       "vendor": "typebot",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native site crawler; wire an OpenAI file-search/vector-store block, or a Dify.AI 'Query Knowledge Base' block pointed at a KB built in Dify from pitchgenius.ai.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/dify-ai"
         },
         "intent": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No 4-state preset; build via the LLM/OpenAI block's output feeding a Condition block.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/openai"
         },
         "persona": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Core mechanic: branching 'groups' connected by conditions.",
+          "source": "https://docs.typebot.com/get-started/overview"
         },
         "questions": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "One Input block per question, chained per branch group.",
+          "source": "https://docs.typebot.com/get-started/overview"
         },
         "capture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Every Input block writes the raw visitor string to a Variable.",
+          "source": "https://docs.typebot.com/get-started/overview"
         },
         "offer": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Condition/branch group routes to an offer message.",
+          "source": "https://docs.typebot.com/get-started/overview"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native calendar block; wire an HTTP Request block to a calendar API or embed a calendar widget via the Embed block.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Email-validated Input block captures it natively; nurture trigger needs an HTTP Request block or the Zapier 'Typebot AI' integration posting into GHL.",
+          "source": "https://zapier.com/apps/typebot/integrations/ai"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL app; use an HTTP Request block calling GHL's contact API, or the Zapier/Make/Integrately bridge.",
+          "source": "https://integrately.com/integrations/gohighlevel/typebot"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same HTTP Request block mechanism against GHL's custom-fields API.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same HTTP Request block mechanism against GHL's tags API.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same HTTP Request block mechanism against GHL's opportunity/pipeline API.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Typebot stores raw 'Results' per bot in its own dashboard/API; push them into GHL as a note via HTTP Request.",
+          "source": "https://docs.typebot.com/get-started/overview"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Write a tag/field to GHL via the HTTP Request block; a GHL workflow triggers off it.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "ghl_calendar": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL calendar block; call GHL's calendar API via HTTP Request.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "ghl_readback": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "HTTP Request block reads GHL's API before rendering the next question.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Webhook blocks, an HTTP Request block, and a public REST API/Results endpoint ship natively.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "POST captured variables to a PitchGenius Intelligence endpoint via the HTTP Request block.",
+          "source": "https://docs.typebot.com/editor/blocks/integrations/http-request"
         },
         "human": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No dedicated native human-handoff primitive found; likely routed via an external live-chat embed or HTTP Request block.",
+          "source": "https://typebot.com/pricing"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "The bubble's previewMessage.message or the flow's first Text block is fully author-controlled; write the AI disclosure into it.",
+          "source": "https://docs.typebot.com/deploy/web/html-javascript"
         },
         "branding": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Branding removed' is a named Starter-plan ($39/mo) feature; ships on Free otherwise.",
+          "source": "https://typebot.com/pricing"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Personal (Free) plan, $0/mo, 200 chats/month, unlimited typebots, webhooks, custom JS/CSS included.",
+          "source": "https://typebot.com/pricing"
         }
       }
     },
@@ -1175,114 +1175,114 @@
       "vendor": "tars",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native recursive website crawl with a body-only content filter and per-answer source citation; dashboard flow is Create knowledge base -> Import from website -> URL.",
+          "source": "https://hellotars.com/docs/guides/knowledge/create-a-knowledge-base"
         },
         "intent": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No 4-state preset; build via the AI Agent gambit's prompt plus branching in the flow canvas.",
+          "source": "https://hellotars.com/docs/guides/building/create-an-agent"
         },
         "persona": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Flow/gambit canvas supports branching paths; route by declared persona.",
+          "source": "https://hellotars.com/docs/guides/building/create-an-agent"
         },
         "questions": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Chain question gambits per persona branch in the flow canvas.",
+          "source": "https://hellotars.com/docs/guides/building/create-an-agent"
         },
         "capture": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No explicit confirmation that gambit answers are stored verbatim (vs. AI-paraphrased) as fields.",
+          "source": "https://hellotars.com/docs/guides/building/create-an-agent"
         },
         "offer": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No named offer/recommendation feature; buildable via a flow branch to a specific message/CTA.",
+          "source": "https://hellotars.com/docs/guides/building/create-an-agent"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native Google Calendar integration checks availability across multiple calendars and routes bookings by qualification answers.",
+          "source": "https://hellotars.com/tools/google-calendar"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native nurture-trigger feature; email capture would be wired via the existing Zapier integration into a GHL nurture workflow.",
+          "source": "https://hellotars.com"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL connector (native CRM connectors are HubSpot/Salesforce); use the existing Zapier integration or a webhook to GHL's contact API.",
+          "source": "https://hellotars.com"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier/webhook mechanism against GHL's field API.",
+          "source": "https://hellotars.com"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier/webhook mechanism against GHL's tags API.",
+          "source": "https://hellotars.com"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier/webhook mechanism against GHL's opportunity API.",
+          "source": "https://hellotars.com"
         },
         "ghl_transcript": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No transcript-export-to-GHL mechanism documented.",
+          "source": "https://hellotars.com/docs/guides/building/create-an-agent"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Push a tag/field to GHL via Zapier/webhook so a GHL workflow can trigger off it.",
+          "source": "https://hellotars.com"
         },
         "ghl_calendar": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Native calendar integrations are Google Calendar/Calendly, not GHL's own; booking into GHL's calendar needs a webhook to GHL's calendar API.",
+          "source": "https://hellotars.com/tools/google-calendar"
         },
         "ghl_readback": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No GHL read-back mechanism documented.",
+          "source": "https://hellotars.com"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No documented native REST API for conversation data; the existing Zapier integration is the primary programmatic hook.",
+          "source": "https://hellotars.com"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Use the Zapier integration (or a webhook) to POST captured data to PitchGenius Intelligence.",
+          "source": "https://hellotars.com"
         },
         "human": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No live-chat/human-handoff feature documented in the pages retrieved.",
+          "source": "https://hellotars.com/docs/guides/building/create-an-agent"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "The pre-chat Callout Bubble message and the agent's greeting gambit are fully author-controlled text; write the AI disclosure into either.",
+          "source": "https://hellotars.com/docs/guides/deploy/design-the-widget"
         },
         "branding": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No 'remove branding'/white-label setting found in the docs pages retrieved.",
+          "source": "https://hellotars.com/docs/guides/deploy/design-the-widget"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Freemium plan, $0/mo, 50 conversations/month, 'Basic LLM models'; sign-up needs only an email, no card mentioned.",
+          "source": "https://hellotars.com/pricing"
         }
       }
     },
@@ -1290,114 +1290,114 @@
       "vendor": "chatbase",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native 'Add website -> Crawl links' data source discovers and ingests every publicly accessible page from a homepage URL.",
+          "source": "https://chatbase.co/docs/user-guides/chatbot/data-sources"
         },
         "intent": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No dedicated intent-classifier feature found; would rely on system-prompt-only phrasing.",
+          "source": "https://www.chatbase.co/pricing"
         },
         "persona": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No native persona/slot-graph builder found; Chatbase is prompt + RAG, not a deterministic flow builder.",
+          "source": "https://www.chatbase.co/pricing"
         },
         "questions": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No confirmed persona-branching or scripted question-sequence feature.",
+          "source": "https://www.chatbase.co/docs/developer-guides/client-side-custom-forms"
         },
         "capture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "A 'Client-Side Custom Forms' feature (name confirmed) can capture structured fields; exact config API not returned by this pass's fetch.",
+          "source": "https://www.chatbase.co/docs/developer-guides/client-side-custom-forms"
         },
         "offer": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "Prompt-driven only; no structured recommendation feature found.",
+          "source": "https://www.chatbase.co/pricing"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native Calendly action ('connect your Calendly account') and native Cal.com action (Event URL + 'Calcom Get Slots').",
+          "source": "https://www.chatbase.co/blog/book-calls-with-ai"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Custom Forms can capture an email; GHL nurture trigger requires the Custom Actions/webhook mechanism to write it into GHL.",
+          "source": "https://www.chatbase.co/docs/developer-guides/client-side-custom-forms"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL connector; use the general-purpose Custom Actions system (server-side tool call) against GHL's contact API.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Custom Actions mechanism against GHL's field API.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Custom Actions mechanism against GHL's tags API.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Custom Actions mechanism against GHL's opportunity API.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "'API' access ships from Standard ($150/mo); pull the transcript and push it into GHL via a Custom Action — no one-click export found.",
+          "source": "https://www.chatbase.co/pricing"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Write a tag/field to GHL via a Custom Action; a GHL workflow triggers off it.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "ghl_calendar": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Native booking actions only cover Calendly/Cal.com; book into GHL's own calendar via a Custom Action calling GHL's calendar API instead.",
+          "source": "https://www.chatbase.co/docs/user-guides/chatbot/actions/cal"
         },
         "ghl_readback": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL read-back; Custom Actions can call GHL's read endpoints.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Custom Actions (server-side tool calling any external API) plus a documented Chatbase API from Standard ($150/mo) up.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Use a Custom Action to POST captured data to a PitchGenius Intelligence endpoint.",
+          "source": "https://www.chatbase.co/docs/developer-guides/overview"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Helpdesk' human-handoff ships starting on the Standard plan ($150/mo).",
+          "source": "https://www.chatbase.co/pricing"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Chat bubble 'Display'/'Overview' tabs fully control the widget's greeting text; write the AI disclosure into it.",
+          "source": "https://chatbase.co/docs/user-guides/chatbot/actions/shopify-actions"
         },
         "branding": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Remove Branding' add-on, $99/month, available on any plan.",
+          "source": "https://www.chatbase.co/pricing"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Free plan, $0/month, 50 message credits/month, 1 agent (deleted after 14 days inactivity).",
+          "source": "https://www.chatbase.co/pricing"
         }
       }
     },
@@ -1520,114 +1520,114 @@
       "vendor": "docsbot",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'Source pages' (crawled/ingested content) is a metered unit on every plan, 50 (Free) up to 100,000 (Business); exact crawl mechanism unconfirmed but ingestion itself is core.",
+          "source": "https://docsbot.ai/pricing"
         },
         "intent": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No 4-state intent classifier or slot-filling documentation found; DocsBot is a Q&A/RAG widget.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "persona": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No persona-branching object found.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "questions": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No scripted per-persona question-sequence feature found.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "capture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "docsbot_lead_capture DOM event exposes submitted lead-capture form fields (e.detail.fields) to page JS.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "offer": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No offer/recommendation logic documented.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "A book_demo custom-button example exists (customButtonCallback), but no calendar provider is wired natively.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Email captured via the lead-capture event; nurture trigger requires custom code pushing it into a GHL workflow.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL integration or Zapier/Make connector found; write code off docsbot_lead_capture calling GHL's contact API.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same custom-code mechanism against GHL's field API.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same custom-code mechanism against GHL's tags API.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same custom-code mechanism against GHL's opportunity API.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "A separate 'Bots - Admin API' likely exposes transcripts (content unconfirmed); push them to GHL by hand.",
+          "source": "https://docsbot.ai/documentation/developer/bot-api"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Write a tag/field to GHL via custom code off the lead-capture event; a GHL workflow triggers off it.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ghl_calendar": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No named calendar hook; customButtonCallback lets you intercept a 'book' button and call GHL's calendar API yourself.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ghl_readback": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "no",
+          "how": "No mechanism found for the bot to read GHL data back into the conversation; hooks are outbound-only (events, button callbacks).",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "A JS API (init/open/close/toggle/unmount/addUserMessage/identify), DOM CustomEvents, and a separate Admin API all ship natively.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Use docsbot_lead_capture/customButtonCallback to POST captured data to a PitchGenius Intelligence endpoint.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "supportCallback(event, history, metadata, ticket) hands off to a human/ticketing system with history and a ticket URL.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "options.botName and the configured welcome/first message are fully author-controlled; write the AI disclosure into it.",
+          "source": "https://docsbot.ai/documentation/developer/embeddable-chat-widget"
         },
         "branding": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No 'remove branding' add-on or setting surfaced on the pricing page.",
+          "source": "https://docsbot.ai/pricing"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Free plan, $0, no credit card required, 1 bot, 50 source pages, 100 monthly AI credits.",
+          "source": "https://docsbot.ai/pricing"
         }
       }
     },
@@ -1865,114 +1865,114 @@
       "vendor": "tidio",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Lyro AI Agent > Knowledge > Data sources > Website URL scans up to 60 priority pages.",
+          "source": "https://help.tidio.com/hc/en-us/articles/14543666652316-Data-sources-Lyro-s-knowledge-base"
         },
         "intent": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No 4-state intent classifier found for Lyro.",
+          "source": "https://help.tidio.com/hc/en-us/articles/15607494952604-Lyro-a-quick-setup"
         },
         "persona": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No visitor-type/persona detection feature found.",
+          "source": "https://help.tidio.com/hc/en-us/articles/15607494952604-Lyro-a-quick-setup"
         },
         "questions": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Tidio's separate 'Flows' builder can branch per answer, but enabling Lyro disables all Flows — the two can't run together.",
+          "source": "https://help.tidio.com/hc/en-us/articles/15607494952604-Lyro-a-quick-setup"
         },
         "capture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "A 'Visitor Identification' API is documented, but the exact field/attribute schema wasn't confirmed.",
+          "source": "https://developers.tidio.com/docs/widget-visitor-identification"
         },
         "offer": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No offer/branching engine confirmed for Lyro.",
+          "source": "https://help.tidio.com/hc/en-us/articles/15607494952604-Lyro-a-quick-setup"
         },
         "booking": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No calendar-booking action found for Lyro.",
+          "source": "https://help.tidio.com/hc/en-us/articles/15607494952604-Lyro-a-quick-setup"
         },
         "nurture": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No email-capture-to-nurture trigger found.",
+          "source": "https://help.tidio.com/hc/en-us/articles/14543666652316-Data-sources-Lyro-s-knowledge-base"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL app; Tidio's own 'Send to Zapier' Flow action + GHL's Zapier app creates/updates the contact.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier bridge writes the GHL custom field.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier bridge adds the GHL tag.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Zapier writes the tag; a GHL workflow (tag-triggered) moves the pipeline stage.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Zapier 'New Conversation' trigger could push the transcript into a GHL note/field.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "'Send to Zapier' -> GHL tag fires or stops a GHL workflow.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "ghl_calendar": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No calendar-booking action found.",
+          "source": "https://help.tidio.com/hc/en-us/articles/15607494952604-Lyro-a-quick-setup"
         },
         "ghl_readback": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "'Send to Zapier' is one-way out (Tidio -> Zapier); no confirmed way to pull GHL data back into a live chat.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "tidioChatApi JS SDK (open, identify, events) plus the built-in Zapier flow action.",
+          "source": "https://developers.tidio.com/docs/widget-listeners-events"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "'Send to Zapier' action would POST the flow's captured data to PitchGenius Intelligence.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5422427950236-Integration-with-Zapier"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Tidio is live-chat-with-operators software; any Lyro conversation sits in the same shared inbox a human can join.",
+          "source": "https://www.tidio.com/"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Home/greeting text is fully custom (Settings > Live Chat > Appearance > Content).",
+          "source": "https://help.tidio.com/hc/en-us/articles/5398825058588-Customize-your-chat-widget"
         },
         "branding": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "'No Tidio branding' is a paid add-on (~$20/mo on top of the subscription, or from Growth+).",
+          "source": "https://www.tidio.com/pricing/"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "No-card 7-day full-feature trial, falls back to a free Basic plan afterward.",
+          "source": "https://help.tidio.com/hc/en-us/articles/5390861883804-Creating-an-Account-and-Logging-In"
         }
       }
     },
@@ -2210,114 +2210,114 @@
       "vendor": "intercom",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Fin AI Agent syncs the website as a content source (26 pages synced live, weekly re-sync).",
+          "source": "https://www.intercom.com/help/en/articles/7837514-add-your-content-for-fin-ai-agent"
         },
         "intent": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No 4-state intent classifier found in Fin/Messenger docs this pass.",
+          "source": "https://developers.intercom.com/installing-intercom/web/methods/"
         },
         "persona": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No persona/visitor-type detection feature found; Fin is a general resolution agent.",
+          "source": "https://www.intercom.com/help/en/articles/7120684-fin-ai-agent-explained"
         },
         "questions": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No per-persona branching question sequence found in Fin docs.",
+          "source": "https://www.intercom.com/help/en/articles/8286630-deploy-fin-ai-agent-over-chat"
         },
         "capture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Custom attributes via Intercom('boot'/'update', {...}) store any collected answer against the visitor.",
+          "source": "https://developers.intercom.com/installing-intercom/web/methods/"
         },
         "offer": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No offer/next-best-action engine found; Fin answers from content, doesn't route to a named offer.",
+          "source": "https://www.intercom.com/help/en/articles/7120684-fin-ai-agent-explained"
         },
         "booking": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "'Fin Sales qualification (book a call)' is a named paid outcome, but no calendar provider (GHL/Calendly/Google) confirmed.",
+          "source": "https://fin.ai/pricing"
         },
         "nurture": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No email-capture-to-nurture trigger found in Fin docs this pass.",
+          "source": "https://www.intercom.com/help/en/articles/7120684-fin-ai-agent-explained"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native GHL app; Intercom's Zapier app + GHL's Zapier app would create/update the contact.",
+          "source": "https://developers.intercom.com/"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier bridge would PUT the captured attribute into a GHL custom field.",
+          "source": "https://developers.intercom.com/"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier bridge adds a GHL tag on a conversation/attribute event.",
+          "source": "https://developers.intercom.com/"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Zapier writes the GHL tag; a GHL workflow (tag-triggered) moves the pipeline stage.",
+          "source": "https://developers.intercom.com/"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Intercom's REST API can export the conversation; a webhook pushes transcript+summary into a GHL note/field.",
+          "source": "https://developers.intercom.com/"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same Zapier/webhook bridge tags the GHL contact to fire or stop a GHL workflow.",
+          "source": "https://developers.intercom.com/"
         },
         "ghl_calendar": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "No calendar provider confirmed for Fin's 'book a call' outcome.",
+          "source": "https://fin.ai/pricing"
         },
         "ghl_readback": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native read; a Workflow webhook step could fetch GHL contact state mid-chat (Workflow outbound-call support unconfirmed).",
+          "source": "https://developers.intercom.com/"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Documented JS Messenger API (show/hide/boot/startConversation/trackEvent) plus Intercom's general REST API.",
+          "source": "https://developers.intercom.com/installing-intercom/web/methods/"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Same REST API/webhook bridge would POST structured qualification data to PitchGenius Intelligence.",
+          "source": "https://developers.intercom.com/"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Fin sits on top of the Intercom helpdesk; any conversation routes to a human seat (Essential $29/seat/mo+).",
+          "source": "https://www.intercom.com/help/en/collections/3894676-fin-ai-agent"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Fin's intro message is fully custom text (set live to 'Hi, I'm PitchGenius's AI guide').",
+          "source": "https://www.intercom.com/help/en/articles/8286630-deploy-fin-ai-agent-over-chat"
         },
         "branding": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "'Powered by Fin' shown live on the Essential trial; no plan confirmed to remove it.",
+          "source": "https://www.intercom.com/pricing"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Essential 14-day trial, Fin free during the trial (no permanent free plan).",
+          "source": "https://www.intercom.com/pricing"
         }
       }
     },
@@ -3015,114 +3015,114 @@
       "vendor": "ghl",
       "items": {
         "knowledge": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native 'Web Crawler' ingestion — specific URLs, directories or entire domains, plus Google Docs/PDF uploads and manual Q&A, up to 4,000 URLs per Knowledge Base.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004416-training-your-conversation-ai-bot"
         },
         "intent": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native 4-state classifier; bot 'goals' are Lead Capture/Appointment Booking/General Q&A — a 4-state read needs custom prompting.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "persona": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No native persona object; the Flow-Based Builder's generic branching would be hand-modeled into personas.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "questions": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Buildable via the flow builder's branching + AI Actions, not out of the box.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "capture": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "Whether Conversation AI's field-writing is constrained to verbatim visitor text (vs. paraphrase) is undocumented.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "offer": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "Buildable via Workflow branching on tags/custom fields, not a preset 'recommend an offer' feature.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "booking": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native to GHL's own calendars: GET /calendars/:calendarId/free-slots then POST /calendars/events/appointments; no native Calendly/Cal.com from inside Conversation AI.",
+          "source": "https://marketplace.gohighlevel.com/docs/ghl/calendars/create-appointment/"
         },
         "nurture": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native via Workflows — a captured email/tag/field triggers a nurture Workflow directly inside GHL.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "ghl_contact": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "It is the CRM itself; contacts are created/updated natively.",
+          "source": "https://marketplace.gohighlevel.com/docs/ghl/contacts/contacts/"
         },
         "ghl_fields": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native custom-field writes on the contact record.",
+          "source": "https://marketplace.gohighlevel.com/docs/ghl/contacts/contacts/"
         },
         "ghl_tags": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "POST /contacts/:contactId/tags — native tag API.",
+          "source": "https://marketplace.gohighlevel.com/docs/ghl/contacts/add-tags/"
         },
         "ghl_pipeline": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native opportunity/pipeline-stage updates on the same CRM object model.",
+          "source": "https://marketplace.gohighlevel.com/docs/ghl/contacts/contacts/"
         },
         "ghl_transcript": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "POST /conversations/inbound-messages posts messages individually into an open conversation on a matching channel; no single-call transcript batch mode, and a closed thread starts a new conversation.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000007340-conversations-api-add-inbound-message-with-contact-id-"
         },
         "ghl_workflows": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native — Workflows trigger directly off contact tags/fields/pipeline changes inside GHL.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "ghl_calendar": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native GHL calendar booking via the Calendars API (free-slots + create-appointment).",
+          "source": "https://marketplace.gohighlevel.com/docs/ghl/calendars/create-appointment/"
         },
         "ghl_readback": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Same database — native read via API v2, plus the MCP server's search_operations/describe_operation/execute_operation pattern.",
+          "source": "https://marketplace.gohighlevel.com/docs/other/mcp/"
         },
         "api": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Full API v2 plus an official MCP server (4-tool facade covering 550+ operations across 38 domains).",
+          "source": "https://marketplace.gohighlevel.com/docs/other/mcp/"
         },
         "pg_handoff": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "build",
+          "how": "No named PitchGenius Intelligence connector; call API v2/MCP execute_operation from a custom integration to push structured data out.",
+          "source": "https://marketplace.gohighlevel.com/docs/other/mcp/"
         },
         "human": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Native — Unified Inbox takeover, switching the bot's response mode off Auto-Pilot.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "ai_disclosure": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "native",
+          "how": "Bot goal/prompt and first-message text are fully author-controlled inside Conversation AI setup; write the AI disclosure into it.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000004401-how-to-set-up-a-conversation-ai-bot"
         },
         "branding": {
           "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "how": "Whether 'Powered by HighLevel' branding appears on the widget at any tier, and how to remove it, is not stated in any page retrieved.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000002960-overview-of-chat-widget-customizations"
         },
         "free_test": {
-          "status": "unknown",
-          "how": "not researched yet",
-          "source": ""
+          "status": "no",
+          "how": "No dedicated free tier for AI Employee (Conversation AI/Voice AI); the platform's 14-day trial covers the base CRM only. Pay-Per-Use (no monthly fee, metered per token) is the cheapest live test, not a stated free plan.",
+          "source": "https://help.gohighlevel.com/support/solutions/articles/155000006652-ai-product-pricing"
         }
       }
     },

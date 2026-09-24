@@ -14,11 +14,12 @@ function itemRows(group, values, escapeHtml) {
         source: "",
       };
       const status = STATUS[value.status] || STATUS.unknown;
+      const flowchart = escapeHtml(item.flowchart);
       const source = value.source
         ? `<a class="checklist-source" href="${escapeHtml(value.source)}" target="_blank" rel="noreferrer">source ↗</a>`
         : `<span class="checklist-source muted">source pending</span>`;
 
-      return `<li class="checklist-item ${status.className}" title="${escapeHtml(item.flowchart)}">
+      return `<li class="checklist-item ${status.className}" title="${flowchart}" data-flowchart="${flowchart}">
         <span class="checklist-mark" aria-label="${status.label}">${status.mark}</span>
         <div class="checklist-copy">
           <div class="checklist-item-head">
@@ -55,6 +56,7 @@ function groupCounts(group, values) {
 
 export function renderChecklist({ vendor, checklist, escapeHtml }) {
   const values = checklist?.vendors?.[vendor.id]?.items || {};
+  const label = `${escapeHtml(vendor.name)} capability checklist`;
   const groups = (checklist?.groups || [])
     .map(
       (group) => `<section class="checklist-group">
@@ -67,7 +69,7 @@ export function renderChecklist({ vendor, checklist, escapeHtml }) {
     )
     .join("");
 
-  return `<aside class="checklist-panel" id="checklist-panel" aria-label="${escapeHtml(vendor.name)} capability checklist">
+  return `<aside class="checklist-panel" id="checklist-panel" aria-label="${label}">
     <div class="checklist-intro">
       <span class="eyebrow">Capability map</span>
       <h2>What ${escapeHtml(vendor.name)} covers</h2>

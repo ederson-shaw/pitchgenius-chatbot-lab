@@ -55,6 +55,10 @@
     display: none;
   }
 
+  .top-actions .top-link {
+    display: none;
+  }
+
   .device-frame {
     transform: scale(0.78);
     transform-origin: top center;
