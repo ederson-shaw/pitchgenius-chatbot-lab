@@ -4,7 +4,36 @@ function scenarioFor(data, scenarioId) {
     .find((item) => item.id === scenarioId);
 }
 
-function renderScenario(item, scenario, index, hasSend, escapeHtml) {
+function recordedRun(item, scenario, data, escapeHtml) {
+  const run = data.runs?.[item.id]?.[scenario.id];
+
+  if (!run) return `<div class="recorded-run empty">not run yet</div>`;
+
+  const answers = (run.turns || [])
+    .map((turn) => `<p>${escapeHtml(turn.bot)}</p>`)
+    .join("");
+  const first = run.turns?.[0]?.seconds_to_first_text;
+  const final = run.turns?.[0]?.seconds_to_final;
+  const timing = `first ${Number(first || 0).toFixed(2)}s · final ${Number(final || 0).toFixed(2)}s`;
+  const image = `lab/runs/${item.id}/${scenario.id}.png`;
+
+  return `<div class="recorded-run">
+    <div class="recorded-run-head">
+      <span>Recorded answer</span>
+      <span>${timing}</span>
+    </div>
+    <div class="recorded-run-answer">${answers}</div>
+    <div class="recorded-run-foot">
+      <span>${escapeHtml(run.date || "Date unavailable")}</span>
+      <a class="recorded-run-thumb" href="${image}" target="_blank" rel="noreferrer">
+        <img src="${image}" alt="${escapeHtml(scenario.title)} capture" />
+        <span>Open capture ↗</span>
+      </a>
+    </div>
+  </div>`;
+}
+
+function renderScenario(item, scenario, index, hasSend, data, escapeHtml) {
   const total = scenario.turns.length;
   const turn = scenario.turns[index] || scenario.turns[0];
   const send = hasSend
@@ -26,6 +55,7 @@ function renderScenario(item, scenario, index, hasSend, escapeHtml) {
     <p class="scenario-expect">
       <strong>Expect:</strong> ${escapeHtml(scenario.expect)}
     </p>
+    ${recordedRun(item, scenario, data, escapeHtml)}
     <div class="button-row">${send}${advance}${copy}</div>
   </div>`;
 }
@@ -48,6 +78,7 @@ export function renderScenarios({ data, item, turnFor, escapeHtml }) {
               scenario,
               turnFor(scenario.id),
               hasSend,
+              data,
               escapeHtml,
             ),
           )

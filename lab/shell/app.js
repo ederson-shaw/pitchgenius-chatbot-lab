@@ -1,6 +1,6 @@
 import { makeActions } from "./actions.js";
 import { bootFrame } from "./frame.js";
-import { renderDrawer, renderPanel } from "./drawer.js";
+import { renderOverlay, renderPanel } from "./drawer.js";
 import { renderStage } from "./stage.js";
 import { renderChecklist } from "../panels/checklist.js";
 import {
@@ -18,12 +18,23 @@ import { renderTopbar } from "./topbar.js";
 const app = document.querySelector("#app");
 let runAction;
 
+function currentChecklist() {
+  const vendor = data.vendors.vendors.find((item) => item.id === state.bot);
+
+  return renderChecklist({
+    vendor,
+    checklist: data.checklist,
+    escapeHtml,
+    open: state.checklistOpen,
+  });
+}
+
 function recordFrameEvent(type, detail) {
   addEvent(type, detail);
 
   if (
-    (state.tab === "events" || state.tab === "ghl") &&
-    document.querySelector("#drawer-body")
+    state.overlay === "tools" &&
+    (state.tab === "events" || state.tab === "ghl")
   )
     refreshPanel();
 }
@@ -41,30 +52,35 @@ function refreshPanel() {
 
 function render() {
   const item = currentAdapter();
-  const checklist =
-    window.innerWidth > 1100
-      ? renderChecklist({
-          vendor: data.vendors.vendors.find(
-            (vendor) => vendor.id === state.bot,
-          ),
-          checklist: data.checklist,
-          escapeHtml,
-        })
-      : "";
 
   app.innerHTML = `${renderTopbar()}
-    <main class="layout ${state.drawer ? "" : "drawer-closed"}">
-      ${checklist}
+    <main class="layout">
       <section class="stage-wrap" aria-label="Website stage">
         <div class="stage-shell ${state.view === "mobile" ? "mobile-stage" : ""}">
           ${renderStage(item)}
         </div>
       </section>
-      ${renderDrawer()}
-    </main>`;
+    </main>
+    <div id="checklist-host">${currentChecklist()}</div>
+    <div id="overlay-host">${renderOverlay()}</div>`;
   bindEvents();
   refreshPanel();
   bootFrame(recordFrameEvent);
+}
+
+function refreshChrome() {
+  document
+    .querySelector(".topbar")
+    ?.replaceWith(
+      new DOMParser().parseFromString(renderTopbar(), "text/html").body
+        .firstElementChild,
+    );
+  const checklistHost = document.querySelector("#checklist-host");
+  if (checklistHost) checklistHost.innerHTML = currentChecklist();
+  const overlayHost = document.querySelector("#overlay-host");
+  if (overlayHost) overlayHost.innerHTML = renderOverlay();
+  bindEvents();
+  refreshPanel();
 }
 
 function setBot(id) {
@@ -93,8 +109,24 @@ function bindEvents() {
     );
   document.querySelector("[data-more]")?.addEventListener("click", () => {
     state.moreOpen = !state.moreOpen;
-    render();
+    refreshChrome();
   });
+  document.querySelectorAll("[data-overlay]").forEach((button) =>
+    button.addEventListener("click", () => {
+      const target = button.dataset.overlay;
+      if (target === "checklist") {
+        state.checklistOpen = !state.checklistOpen;
+        localStorage.setItem(
+          "pg.lab.checklist",
+          state.checklistOpen ? "1" : "0",
+        );
+      } else {
+        state.overlay = state.overlay === target ? "" : target;
+        updateUrl();
+      }
+      refreshChrome();
+    }),
+  );
   document.querySelectorAll("[data-view]").forEach((button) =>
     button.addEventListener("click", () => {
       state.view = button.dataset.view;
@@ -106,13 +138,30 @@ function bindEvents() {
     button.addEventListener("click", () => {
       state.tab = button.dataset.tab;
       updateUrl();
-      refreshPanel();
+      refreshChrome();
     }),
   );
-  document.querySelector("#drawer-toggle").addEventListener("click", () => {
-    state.drawer = !state.drawer;
-    render();
-  });
+  document
+    .querySelector("#checklist-card")
+    ?.addEventListener("toggle", (event) => {
+      state.checklistOpen = event.target.open;
+      localStorage.setItem("pg.lab.checklist", state.checklistOpen ? "1" : "0");
+      const button = document.querySelector('[data-overlay="checklist"]');
+      button?.classList.toggle("active", state.checklistOpen);
+      button?.setAttribute("aria-pressed", String(state.checklistOpen));
+    });
+  document
+    .querySelector("[data-conversation-compare]")
+    ?.addEventListener("click", () => {
+      state.conversationCompare = !state.conversationCompare;
+      refreshChrome();
+    });
+  document
+    .querySelector("[data-conversation-scenario]")
+    ?.addEventListener("change", (event) => {
+      state.conversationScenario = event.target.value;
+      refreshChrome();
+    });
 }
 
 document.addEventListener("keydown", (event) => {
@@ -122,9 +171,10 @@ document.addEventListener("keydown", (event) => {
     return;
   if (event.key === "ArrowRight") cycleBot(1);
   if (event.key === "ArrowLeft") cycleBot(-1);
-  if (event.key === "Escape" && state.drawer) {
-    state.drawer = false;
-    render();
+  if (event.key === "Escape" && state.overlay) {
+    state.overlay = "";
+    updateUrl();
+    refreshChrome();
   }
 });
 

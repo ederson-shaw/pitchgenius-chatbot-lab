@@ -7,42 +7,50 @@
         {
           "id": "knowledge",
           "title": "Answers from pitchgenius.ai content",
-          "flowchart": "AI WEBSITE AGENT → Answers questions"
+          "flowchart": "AI WEBSITE AGENT → Answers questions",
+          "short": "Knows our site"
         },
         {
           "id": "intent",
           "title": "Detects visitor intent (browsing, interested, high, not interested)",
-          "flowchart": "C{VISITOR INTENT}"
+          "flowchart": "C{VISITOR INTENT}",
+          "short": "Reads intent"
         },
         {
           "id": "persona",
           "title": "Identifies visitor type (solo, rep, manager, enterprise)",
-          "flowchart": "J{WHO ARE YOU?}"
+          "flowchart": "J{WHO ARE YOU?}",
+          "short": "Spots the persona"
         },
         {
           "id": "questions",
           "title": "Runs a different question sequence per persona",
-          "flowchart": "S2-S6, R2-R6, T2-T7, EN2-EN7"
+          "flowchart": "S2-S6, R2-R6, T2-T7, EN2-EN7",
+          "short": "Asks per persona"
         },
         {
           "id": "capture",
           "title": "Stores the visitor's answers as fields",
-          "flowchart": "AI AGENT CAPTURES DATA → QUALIFICATION DATA"
+          "flowchart": "AI AGENT CAPTURES DATA → QUALIFICATION DATA",
+          "short": "Saves answers"
         },
         {
           "id": "offer",
           "title": "Recommends an offer or personalised demo",
-          "flowchart": "PERSONALIZED OFFER → NEXT BEST ACTION"
+          "flowchart": "PERSONALIZED OFFER → NEXT BEST ACTION",
+          "short": "Offers demo or plan"
         },
         {
           "id": "booking",
           "title": "Books an appointment inside the chat",
-          "flowchart": "BOOK AN APPOINTMENT"
+          "flowchart": "BOOK AN APPOINTMENT",
+          "short": "Books in chat"
         },
         {
           "id": "nurture",
           "title": "Captures email for nurture when not ready",
-          "flowchart": "NOT INTERESTED → EMAIL NURTURE"
+          "flowchart": "NOT INTERESTED → EMAIL NURTURE",
+          "short": "Captures email"
         }
       ]
     },
@@ -53,42 +61,50 @@
         {
           "id": "ghl_contact",
           "title": "Creates or updates the GHL contact",
-          "flowchart": "CREATE / UPDATE CONTACT"
+          "flowchart": "CREATE / UPDATE CONTACT",
+          "short": "GHL contact"
         },
         {
           "id": "ghl_fields",
           "title": "Writes GHL custom fields",
-          "flowchart": "UPDATE CUSTOM FIELDS"
+          "flowchart": "UPDATE CUSTOM FIELDS",
+          "short": "GHL custom fields"
         },
         {
           "id": "ghl_tags",
           "title": "Applies GHL tags (TAG_SOLOPRENEUR ...)",
-          "flowchart": "APPLY TAGS"
+          "flowchart": "APPLY TAGS",
+          "short": "GHL tags"
         },
         {
           "id": "ghl_pipeline",
           "title": "Updates lead status and pipeline stage",
-          "flowchart": "UPDATE LEAD STATUS → UPDATE SALES PIPELINE"
+          "flowchart": "UPDATE LEAD STATUS → UPDATE SALES PIPELINE",
+          "short": "GHL pipeline"
         },
         {
           "id": "ghl_transcript",
           "title": "Stores transcript and AI summary on the contact",
-          "flowchart": "STORE TRANSCRIPT + AI SUMMARY"
+          "flowchart": "STORE TRANSCRIPT + AI SUMMARY",
+          "short": "GHL transcript"
         },
         {
           "id": "ghl_workflows",
           "title": "Triggers GHL workflows (nurture, stop nurture)",
-          "flowchart": "TRIGGER WORKFLOWS, STOP MARKETING NURTURE"
+          "flowchart": "TRIGGER WORKFLOWS, STOP MARKETING NURTURE",
+          "short": "GHL workflows"
         },
         {
           "id": "ghl_calendar",
           "title": "Books into the GHL calendar",
-          "flowchart": "UPDATE GHL: APPOINTMENT BOOKED"
+          "flowchart": "UPDATE GHL: APPOINTMENT BOOKED",
+          "short": "GHL calendar"
         },
         {
           "id": "ghl_readback",
           "title": "Reads contact history, status and appointment back from GHL",
-          "flowchart": "GoHighLevel sends back: contact history, lead status ..."
+          "flowchart": "GoHighLevel sends back: contact history, lead status ...",
+          "short": "Reads from GHL"
         }
       ]
     },
@@ -99,12 +115,14 @@
         {
           "id": "api",
           "title": "API, webhook or MCP to send and receive data",
-          "flowchart": "API / MCP INTEGRATION"
+          "flowchart": "API / MCP INTEGRATION",
+          "short": "API / webhook"
         },
         {
           "id": "pg_handoff",
           "title": "Structured hand-off to PitchGenius Intelligence",
-          "flowchart": "API → PITCHGENIUS INTELLIGENCE"
+          "flowchart": "API → PITCHGENIUS INTELLIGENCE",
+          "short": "Hand-off to PitchGenius"
         }
       ]
     },
@@ -115,22 +133,26 @@
         {
           "id": "human",
           "title": "A person can take over the chat",
-          "flowchart": "SALES MEETING (human in the loop)"
+          "flowchart": "SALES MEETING (human in the loop)",
+          "short": "Human takeover"
         },
         {
           "id": "ai_disclosure",
           "title": "Can say it is an AI in the greeting",
-          "flowchart": "legal: CA B.O.T. Act, EU AI Act art. 50"
+          "flowchart": "legal: CA B.O.T. Act, EU AI Act art. 50",
+          "short": "Says it is AI"
         },
         {
           "id": "branding",
           "title": "Full PitchGenius look, no 'Powered by'",
-          "flowchart": "PITCHGENIUS WEBSITE"
+          "flowchart": "PITCHGENIUS WEBSITE",
+          "short": "Our branding"
         },
         {
           "id": "free_test",
           "title": "Testable for free today",
-          "flowchart": "owner: testar freemium"
+          "flowchart": "owner: testar freemium",
+          "short": "Free to test"
         }
       ]
     }

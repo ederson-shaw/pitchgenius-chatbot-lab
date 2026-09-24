@@ -57,9 +57,7 @@ export function renderTopbar() {
   return `<header class="topbar">
     <a class="brand" href="index.html" aria-label="PitchGenius Chatbot Lab">
       <span class="site-mark" aria-hidden="true"><span class="site-mark-dot"></span></span>
-      <span class="brand-name">PitchGenius</span>
-      <span class="brand-divider">/</span>
-      <span class="brand-label">Chatbot Lab</span>
+      <span class="brand-name">PitchGenius Chatbot Lab</span>
     </a>
     <div class="vendor-nav" aria-label="Chatbot vendors">
       <div class="chip-groups">${renderGroups()}<div class="more-wrap">
@@ -68,13 +66,16 @@ export function renderTopbar() {
       </div>${renderPlatform()}</div>
     </div>
     <div class="top-actions">
-      <a class="top-link" href="report.html">Findings</a>
-      <button class="top-button ${state.view === "desktop" ? "active" : ""}"
-        data-view="desktop" aria-label="Use desktop viewport">Desktop</button>
-      <button class="top-button ${state.view === "mobile" ? "active" : ""}"
-        data-view="mobile" aria-label="Use mobile viewport">Mobile</button>
-      <button class="top-button ${state.drawer ? "active" : ""}" id="drawer-toggle"
-        aria-label="Toggle detail drawer">☰</button>
+      <button class="top-button ${state.checklistOpen ? "active" : ""}"
+        data-overlay="checklist" aria-pressed="${state.checklistOpen}">Checklist</button>
+      <button class="top-button ${state.overlay === "conversations" ? "active" : ""}"
+        data-overlay="conversations" aria-pressed="${state.overlay === "conversations"}">
+        Conversations
+      </button>
+      <button class="top-button ${state.overlay === "findings" ? "active" : ""}"
+        data-overlay="findings" aria-pressed="${state.overlay === "findings"}">Findings</button>
+      <button class="top-button ${state.overlay === "tools" ? "active" : ""}"
+        data-overlay="tools" aria-pressed="${state.overlay === "tools"}">Tools</button>
     </div>
   </header>`;
 }

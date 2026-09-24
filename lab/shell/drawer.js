@@ -1,10 +1,12 @@
 import { renderBots } from "../panels/bots.js";
-import { renderChecklist } from "../panels/checklist.js";
 import { renderBrand } from "../panels/brand.js";
+import { renderChecklist } from "../panels/checklist.js";
 import { renderContext } from "../panels/context.js";
 import { renderEvents } from "../panels/events.js";
+import { renderFindings } from "../panels/findings.js";
 import { renderGhl } from "../panels/ghl.js";
 import { renderInject } from "../panels/inject.js";
+import { renderConversations } from "../panels/conversations.js";
 import { renderScore } from "../panels/score.js";
 import { renderScenarios } from "../panels/scenarios.js";
 import {
@@ -24,18 +26,13 @@ export function actionButton(item, action, label) {
   const className = action === "open" || action === "send" ? " primary" : "";
 
   return `<button class="button${className}" data-action="${action}"
-    ${available ? "" : "disabled"}
-    title="${available ? label : "Not documented"}">
+    ${available ? "" : "disabled"} title="${available ? label : "Not documented"}">
     ${label}${available ? "" : " · not documented"}
   </button>`;
 }
 
-export function renderDrawer() {
-  const visibleTabs =
-    window.innerWidth <= 1100
-      ? tabs
-      : tabs.filter((tab) => tab !== "checklist");
-  const tabButtons = visibleTabs
+function renderTools() {
+  const tabButtons = tabs
     .map(
       (tab) => `<button class="tab ${tab === state.tab ? "active" : ""}"
         role="tab" aria-selected="${tab === state.tab}" data-tab="${tab}">
@@ -44,19 +41,53 @@ export function renderDrawer() {
     )
     .join("");
 
-  return `<aside class="drawer">
-    <nav class="drawer-tabs" role="tablist" aria-label="Lab panels">${tabButtons}</nav>
-    <div class="drawer-body" id="drawer-body"></div>
+  return `<aside class="overlay-sheet tools-sheet" aria-label="Tools">
+    <div class="overlay-head tools-head">
+      <div>
+        <span class="eyebrow">Power panels</span>
+        <h2>Tools</h2>
+        <p>Configuration, controls, and diagnostics stay out of the default view.</p>
+      </div>
+      <div class="viewport-switch" aria-label="Preview viewport">
+        <button class="overlay-switch ${state.view === "desktop" ? "active" : ""}"
+          data-view="desktop">Desktop</button>
+        <button class="overlay-switch ${state.view === "mobile" ? "active" : ""}"
+          data-view="mobile">Mobile</button>
+      </div>
+    </div>
+    <nav class="tools-tabs" role="tablist" aria-label="Tools panels">${tabButtons}</nav>
+    <div class="overlay-scroll tools-body" id="overlay-body"></div>
   </aside>`;
 }
 
+export function renderOverlay() {
+  if (state.overlay === "conversations")
+    return renderConversations({
+      data,
+      vendor: currentVendor(),
+      escapeHtml,
+      state,
+    });
+  if (state.overlay === "findings")
+    return renderFindings({ report: data.report, escapeHtml });
+  if (state.overlay === "tools") return renderTools();
+  return "";
+}
+
 export function renderPanel() {
-  const body = document.querySelector("#drawer-body");
+  const body = document.querySelector("#overlay-body");
+  if (!body || state.overlay !== "tools") return;
+
   const item = currentAdapter();
   const meta = currentVendor();
   const renderers = {
     checklist: () =>
-      renderChecklist({ vendor: meta, checklist: data.checklist, escapeHtml }),
+      renderChecklist({
+        vendor: meta,
+        checklist: data.checklist,
+        escapeHtml,
+        open: true,
+      }),
     bots: () =>
       renderBots({
         item,

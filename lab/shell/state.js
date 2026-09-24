@@ -5,7 +5,10 @@ export const state = {
   bot: params.get("bot") || "",
   view: params.get("view") || "desktop",
   tab: params.get("tab") || localStorage.getItem("pg.lab.tab") || "bots",
-  drawer: window.innerWidth <= 1100,
+  overlay: params.get("overlay") || "",
+  checklistOpen: localStorage.getItem("pg.lab.checklist") === "1",
+  conversationCompare: false,
+  conversationScenario: "browse-what",
   moreOpen: false,
   events: [],
   ghl: { turns: [], payload: {} },
@@ -15,6 +18,8 @@ export const data = {
   criteria: { criteria: [] },
   checklist: { groups: [], vendors: {} },
   vendors: { vendors: [], rejected: [] },
+  runs: {},
+  report: { sections: [] },
   bots: {},
   adapters: [],
 };
@@ -38,19 +43,32 @@ export async function loadJson(path) {
   return response.json();
 }
 
+export async function loadText(path) {
+  const response = await fetch(path);
+
+  if (!response.ok) throw new Error(`${path} returned ${response.status}`);
+
+  return response.text();
+}
+
 export async function loadData() {
-  const [scenarios, criteria, checklist, vendors, config] = await Promise.all([
-    loadJson("lab/data/scenarios.json"),
-    loadJson("lab/data/criteria.json"),
-    loadJson("lab/data/checklist.json"),
-    loadJson("lab/data/vendors.json"),
-    loadJson("config/bots.json"),
-  ]);
+  const [scenarios, criteria, checklist, vendors, config, runs, report] =
+    await Promise.all([
+      loadJson("lab/data/scenarios.json"),
+      loadJson("lab/data/criteria.json"),
+      loadJson("lab/data/checklist.json"),
+      loadJson("lab/data/vendors.json"),
+      loadJson("config/bots.json"),
+      loadJson("lab/data/runs.json"),
+      loadJson("lab/data/report.json"),
+    ]);
 
   data.scenarios = scenarios;
   data.criteria = criteria;
   data.checklist = checklist;
   data.vendors = vendors;
+  data.runs = runs;
+  data.report = report;
   data.bots = config.bots || {};
   data.adapters = makeAdapters(vendors.vendors);
 
@@ -169,6 +187,8 @@ export function updateUrl() {
     view: state.view,
     tab: state.tab,
   });
+
+  if (state.overlay) query.set("overlay", state.overlay);
 
   history.replaceState({}, "", `${location.pathname}?${query}`);
   localStorage.setItem("pg.lab.tab", state.tab);
