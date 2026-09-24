@@ -46,7 +46,7 @@
     },
     "chatbase": {
       "chatbotId": "",
-      "snippet": "<script>window.chatbaseConfig = { chatbotId: \"ypN18hcm863Tbk1HSjJLs\" };</script>\n<script src=\"https://www.chatbase.co/embed.min.js\" chatbotId=\"ypN18hcm863Tbk1HSjJLs\" domain=\"www.chatbase.co\" defer></script>\n"
+      "snippet": "<script>window.chatbaseConfig = { chatbotId: \"ypN18hcm863Tbk1HSjJLs\" };</script>\n<script src=\"https://www.chatbase.co/embed.min.js\" chatbotId=\"ypN18hcm863Tbk1HSjJLs\" domain=\"www.chatbase.co\" defer></script>\n\n"
     },
     "chatwoot": {
       "baseUrl": "",

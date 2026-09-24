@@ -1,0 +1,3245 @@
+{
+  "groups": [
+    {
+      "id": "agent",
+      "title": "AI website agent",
+      "items": [
+        {
+          "id": "knowledge",
+          "title": "Answers from pitchgenius.ai content",
+          "flowchart": "AI WEBSITE AGENT → Answers questions"
+        },
+        {
+          "id": "intent",
+          "title": "Detects visitor intent (browsing, interested, high, not interested)",
+          "flowchart": "C{VISITOR INTENT}"
+        },
+        {
+          "id": "persona",
+          "title": "Identifies visitor type (solo, rep, manager, enterprise)",
+          "flowchart": "J{WHO ARE YOU?}"
+        },
+        {
+          "id": "questions",
+          "title": "Runs a different question sequence per persona",
+          "flowchart": "S2-S6, R2-R6, T2-T7, EN2-EN7"
+        },
+        {
+          "id": "capture",
+          "title": "Stores the visitor's answers as fields",
+          "flowchart": "AI AGENT CAPTURES DATA → QUALIFICATION DATA"
+        },
+        {
+          "id": "offer",
+          "title": "Recommends an offer or personalised demo",
+          "flowchart": "PERSONALIZED OFFER → NEXT BEST ACTION"
+        },
+        {
+          "id": "booking",
+          "title": "Books an appointment inside the chat",
+          "flowchart": "BOOK AN APPOINTMENT"
+        },
+        {
+          "id": "nurture",
+          "title": "Captures email for nurture when not ready",
+          "flowchart": "NOT INTERESTED → EMAIL NURTURE"
+        }
+      ]
+    },
+    {
+      "id": "ghl",
+      "title": "GoHighLevel",
+      "items": [
+        {
+          "id": "ghl_contact",
+          "title": "Creates or updates the GHL contact",
+          "flowchart": "CREATE / UPDATE CONTACT"
+        },
+        {
+          "id": "ghl_fields",
+          "title": "Writes GHL custom fields",
+          "flowchart": "UPDATE CUSTOM FIELDS"
+        },
+        {
+          "id": "ghl_tags",
+          "title": "Applies GHL tags (TAG_SOLOPRENEUR ...)",
+          "flowchart": "APPLY TAGS"
+        },
+        {
+          "id": "ghl_pipeline",
+          "title": "Updates lead status and pipeline stage",
+          "flowchart": "UPDATE LEAD STATUS → UPDATE SALES PIPELINE"
+        },
+        {
+          "id": "ghl_transcript",
+          "title": "Stores transcript and AI summary on the contact",
+          "flowchart": "STORE TRANSCRIPT + AI SUMMARY"
+        },
+        {
+          "id": "ghl_workflows",
+          "title": "Triggers GHL workflows (nurture, stop nurture)",
+          "flowchart": "TRIGGER WORKFLOWS, STOP MARKETING NURTURE"
+        },
+        {
+          "id": "ghl_calendar",
+          "title": "Books into the GHL calendar",
+          "flowchart": "UPDATE GHL: APPOINTMENT BOOKED"
+        },
+        {
+          "id": "ghl_readback",
+          "title": "Reads contact history, status and appointment back from GHL",
+          "flowchart": "GoHighLevel sends back: contact history, lead status ..."
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "title": "Integration",
+      "items": [
+        {
+          "id": "api",
+          "title": "API, webhook or MCP to send and receive data",
+          "flowchart": "API / MCP INTEGRATION"
+        },
+        {
+          "id": "pg_handoff",
+          "title": "Structured hand-off to PitchGenius Intelligence",
+          "flowchart": "API → PITCHGENIUS INTELLIGENCE"
+        }
+      ]
+    },
+    {
+      "id": "site",
+      "title": "On the website",
+      "items": [
+        {
+          "id": "human",
+          "title": "A person can take over the chat",
+          "flowchart": "SALES MEETING (human in the loop)"
+        },
+        {
+          "id": "ai_disclosure",
+          "title": "Can say it is an AI in the greeting",
+          "flowchart": "legal: CA B.O.T. Act, EU AI Act art. 50"
+        },
+        {
+          "id": "branding",
+          "title": "Full PitchGenius look, no 'Powered by'",
+          "flowchart": "PITCHGENIUS WEBSITE"
+        },
+        {
+          "id": "free_test",
+          "title": "Testable for free today",
+          "flowchart": "owner: testar freemium"
+        }
+      ]
+    }
+  ],
+  "vendors": {
+    "deep-chat": {
+      "vendor": "deep-chat",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "react-chatbotify": {
+      "vendor": "react-chatbotify",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "asyntai": {
+      "vendor": "asyntai",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "stammer": {
+      "vendor": "stammer",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "botpress": {
+      "vendor": "botpress",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "voiceflow": {
+      "vendor": "voiceflow",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "typebot": {
+      "vendor": "typebot",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "landbot": {
+      "vendor": "landbot",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "dify": {
+      "vendor": "dify",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "tars": {
+      "vendor": "tars",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "chatbase": {
+      "vendor": "chatbase",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "chatling": {
+      "vendor": "chatling",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "docsbot": {
+      "vendor": "docsbot",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "elfsight": {
+      "vendor": "elfsight",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "wonderchat": {
+      "vendor": "wonderchat",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "tidio": {
+      "vendor": "tidio",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "freshchat": {
+      "vendor": "freshchat",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "jivochat": {
+      "vendor": "jivochat",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "intercom": {
+      "vendor": "intercom",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "yellow": {
+      "vendor": "yellow",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "tawk": {
+      "vendor": "tawk",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "crisp": {
+      "vendor": "crisp",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "kapa": {
+      "vendor": "kapa",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "hubspot": {
+      "vendor": "hubspot",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "own": {
+      "vendor": "own",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "ghl": {
+      "vendor": "ghl",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    },
+    "closebot": {
+      "vendor": "closebot",
+      "items": {
+        "knowledge": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "intent": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "persona": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "questions": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "capture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "offer": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "booking": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "nurture": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_contact": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_fields": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_tags": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_pipeline": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_transcript": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_workflows": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_calendar": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ghl_readback": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "api": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "pg_handoff": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "human": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "ai_disclosure": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "branding": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        },
+        "free_test": {
+          "status": "unknown",
+          "how": "not researched yet",
+          "source": ""
+        }
+      }
+    }
+  }
+}
