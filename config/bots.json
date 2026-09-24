@@ -42,7 +42,7 @@
     },
     "typebot": {
       "typebotId": "",
-      "snippet": ""
+      "snippet": "<script type=\"module\">\n  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'\n\n\n  Typebot.initBubble({\n    typebot: \"pitch-genius-lab-hb1de8f\",\n    theme: {\n      button: { backgroundColor: \"#30b6b9\" },\n      chatWindow: { backgroundColor: \"#F8F8F8\" },\n    },\n  });\n</script>\n"
     },
     "chatbase": {
       "chatbotId": "",
